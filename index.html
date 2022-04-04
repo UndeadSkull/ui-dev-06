@@ -1,14 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/colors.css">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="index.css">
+
+    <script defer src="index.js"></script>
+
 </head>
+
 <body>
-    Tigris Valley
+    <header>
+        <img src="assets/Logo.svg" style="width: 215px" />
+        <nav>
+            <ul class="header-items">
+                <li><a href="#" class="active">About us</a></li>
+                <li><a href="#">Care units</a></li>
+                <li><a href="#">Treatments</a></li>
+                <li><a href="#">Facilities</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a class="btn btn-secondary" href="#">
+            <div class="btn-text">Watch Video</div>
+            <div class="btn-icon">
+                <img src="assets/icons/video.svg" alt="">
+            </div>
+        </a>
+    </header>
+    <section class="hero">
+        <div class="slider-container">
+            <div class="mySlides fade">
+                <img src="assets/images/hero1.png" style="width:100%">
+                <div class="content">
+                    <h2>
+                        A different pace for a peaceful life
+                    </h2>
+                    <p>Tigris Valley manages to restore tranquillity in your life.</p>
+                    <p>We help to relieve you from strenuous tensions and anxieties of life.</p>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <img src="assets/images/hero1.png" style="width:100%">
+                <div class="content">
+                    <h2>
+                        A different pace for a great life
+                    </h2>
+                    <p>Tigris Valley manages to restore tranquillity in your life.</p>
+                    <p>We help to relieve you from strenuous tensions and anxieties of life.</p>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <img src="assets/images/hero1.png" style="width:100%">
+                <div class="content">
+                    <h2>
+                        A new pace for a peaceful life
+                    </h2>
+                    <p>Tigris Valley manages to restore tranquillity in your life.</p>
+                    <p>We help to relieve you from strenuous tensions and anxieties of life.</p>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">
+                <img src="assets/icons/arrow-left.svg" alt="">
+            </a>
+            <a class="next" onclick="plusSlides(1)">
+                <img src="assets/icons/arrow-right.svg" alt="">
+            </a>
+        </div>
+        <form class="form-container">
+            <div class="input-box">
+                <div class="icon">
+                    <img src="assets/icons/calender.svg" alt="">
+                </div>
+                <label>
+                    <div>
+                        <div class="title">Check in</div>
+                        <div class="subtitle">Select your date</div>
+                    </div>
+                    <input type="date">
+                </label>
+            </div>
+            <div class="input-box">
+                <div class="icon">
+                    <img src="assets/icons/calender.svg" alt="">
+                </div>
+                <label>
+                    <div>
+                        <div class="title">Check out</div>
+                        <div class="subtitle">Select your date</div>
+                    </div>
+                    <input type="date">
+                </label>
+            </div>
+            <div class="input-box">
+                <div class="icon">
+                    <img src="assets/icons/user.svg" alt="">
+                </div>
+                <label>
+                    <div>
+                        <div class="title">Travelers</div>
+                        <div class="subtitle">Add guests</div>
+                    </div>
+                </label>
+            </div>
+            <a href="#" class="btn">Book Now</a>
+        </form>
+    </section>
+    <section class="about">
+        
+    </section>
 </body>
+
 </html>

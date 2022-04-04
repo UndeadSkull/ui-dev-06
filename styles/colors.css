@@ -1,0 +1,21 @@
+:root {
+    --primary: #00614D;
+    --secondary: #F2F7F6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #373737;
+}
+
+p,
+a {
+    color: #373737CC;
+}
+a:hover{
+    color: #373737;
+}
