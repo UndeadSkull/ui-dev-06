@@ -20,3 +20,30 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
+
+const scrollContainer1 = document.querySelector(".gallery-container");
+scrollContainer1.addEventListener("wheel", (evt) => {
+  evt.preventDefault();
+  sideScroll(scrollContainer1, evt.deltaY, 5, 300);
+});
+
+const scrollContainer2 = document.querySelector(".facilities-container");
+
+function scrollRight() {
+  sideScroll(scrollContainer2, 300, 5, 350)
+}
+function scrollLeft() {
+  sideScroll(scrollContainer2, -300, 5, 350)
+}
+
+function sideScroll(element, delta, speed, distance) {
+  step = delta / 50;
+  scrollAmount = 0;
+  var slideTimer = setInterval(function () {
+    element.scrollLeft += step;
+    scrollAmount += Math.abs(step);
+    if (scrollAmount >= distance) {
+      window.clearInterval(slideTimer);
+    }
+  }, speed);
+}

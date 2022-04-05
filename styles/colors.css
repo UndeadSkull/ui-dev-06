@@ -16,6 +16,17 @@ p,
 a {
     color: #373737CC;
 }
-a:hover{
+
+a:not(.btn):hover {
     color: #373737;
+}
+
+.btn {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary);
 }
