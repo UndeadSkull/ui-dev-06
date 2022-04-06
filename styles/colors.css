@@ -13,7 +13,9 @@ h6 {
 }
 
 p,
-a {
+a,
+.text,
+.card-text {
     color: #373737CC;
 }
 

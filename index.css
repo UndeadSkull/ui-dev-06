@@ -1,4 +1,5 @@
 section.hero {
+    margin-top: 26px;
     padding: 5px 90px;
 }
 
@@ -9,6 +10,12 @@ section.hero>.slider-container {
 
 .slider-container>.mySlides {
     display: none;
+}
+
+.mySlides>img {
+    height: 75vh;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .mySlides .content {
@@ -248,6 +255,11 @@ section.experience>.image-container {
     position: relative;
     width: 585px;
     height: 447px;
+}
+section.experience>.image-container>img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 section.experience>.image-container>.image-text {

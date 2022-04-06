@@ -18,10 +18,11 @@
         flex-wrap: wrap;
         max-width: min-content;
         margin: auto;
+        padding: 20px;
     }
 
     section.experience>.text-container {
-        padding: 20px;
+        padding: 20px 0;
     }
 
     .footer-top {
@@ -35,7 +36,8 @@
         ;
     }
 
-    .footer-top>* {
+    .footer-top>*,
+    .footer-bottom {
         padding: 20px;
     }
 }
@@ -53,6 +55,14 @@
         flex-wrap: wrap;
         min-width: 500px;
         width: 500px;
+        
+    }
+    section.hero>.form-container label::after{
+        display: none;
+    }
+
+    section.hero>.form-container>.btn {
+        margin: 10px;
     }
 
     section.hero h2 {
@@ -83,18 +93,11 @@
         height: 100%;
     }
 
-    section.experience>.image-container {
-        max-width: 100%;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
     section.experience>.image-container>img {
         max-width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
-    section.experience>.image-container>.image-text{
+
+    section.experience>.image-container>.image-text {
         padding: 20px;
     }
 
@@ -122,9 +125,34 @@
     section.doctor {
         padding: 20px
     }
+
+    section.doctor {
+        margin: 20px;
+    }
+
+    section.hero>.form-container {
+        min-width: unset;
+        max-width: 240px;
+        padding: 20px 30px;
+    }
+    section.hero>.form-container>* {
+        margin: 6px;
+    }
 }
 
 @media only screen and (max-width:550px) {
+    header .btn-text {
+        display: none;
+    }
+
+    header a.btn>.btn-icon {
+        margin: 0;
+    }
+
+    header a.btn>.btn-icon>img {
+        width: 16px;
+    }
+
     .footer-top {
         grid-template-columns: 1fr;
         grid-template-rows: .5fr 1fr 2fr .6fr;
