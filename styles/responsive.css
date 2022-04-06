@@ -1,0 +1,144 @@
+@media only screen and (min-width:1500px) {
+
+    body>* {
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    section.experience,
+    section.doctor {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width:1300px) {
+    section.experience {
+        flex-wrap: wrap;
+        max-width: min-content;
+        margin: auto;
+    }
+
+    section.experience>.text-container {
+        padding: 20px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .5fr 1fr .6fr;
+        grid-auto-flow: column;
+        grid-template-areas:
+            "basic contact"
+            "location location"
+            "links links"
+        ;
+    }
+
+    .footer-top>* {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    header>nav.mobile {
+        display: block;
+    }
+
+    header>nav.desktop {
+        display: none;
+    }
+
+    section.hero>.form-container {
+        flex-wrap: wrap;
+        min-width: 500px;
+        width: 500px;
+    }
+
+    section.hero h2 {
+        font-size: max(16px, 4vw);
+        line-height: max(20px, 5vw);
+    }
+
+    section.hero p {
+        font-size: max(8px, 1.4vw);
+        line-height: max(8px, 1.8vw);
+    }
+
+    section.about {
+        flex-wrap: wrap;
+    }
+
+    section.about>.image-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    section.about>.image-container>.image {
+        width: 100%;
+        height: 100%;
+    }
+
+    section.about>.image-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    section.experience>.image-container {
+        max-width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    section.experience>.image-container>img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    section.experience>.image-container>.image-text{
+        padding: 20px;
+    }
+
+    section.doctor {
+        flex-wrap: wrap;
+    }
+
+    section.doctor>.doctor-container {
+        margin-right: 0;
+        z-index: 100;
+    }
+
+    section.doctor>img {
+        width: 200px;
+        margin-top: -100px;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width:720px) {
+
+    body>*,
+    section.hero,
+    section.about,
+    section.doctor {
+        padding: 20px
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 1fr 2fr .6fr;
+        grid-auto-flow: column;
+        grid-template-areas:
+            "basic"
+            "contact"
+            "location"
+            "links"
+        ;
+    }
+
+    .footer-top>* {
+        padding: 20px;
+        border-right: none;
+    }
+}

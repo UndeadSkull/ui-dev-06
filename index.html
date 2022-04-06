@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/colors.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 
     <script defer src="index.js"></script>
 
@@ -24,7 +25,20 @@
 <body>
     <header>
         <img src="assets/Logo.svg" style="width: 215px" />
-        <nav>
+        <nav class="desktop">
+            <ul class="header-items">
+                <li><a href="#" class="active">About us</a></li>
+                <li><a href="#">Care units</a></li>
+                <li><a href="#">Treatments</a></li>
+                <li><a href="#">Facilities</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <img src="assets/icons/Hamburger.svg" alt="">
             <ul class="header-items">
                 <li><a href="#" class="active">About us</a></li>
                 <li><a href="#">Care units</a></li>
