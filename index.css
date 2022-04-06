@@ -322,7 +322,6 @@ section>.section-text {
 }
 
 .card>.btn {
-    display: inline;
     padding: 13px 45px;
 }
 
@@ -347,7 +346,7 @@ section.gallery>.gallery-container img {
     border-radius: 10px;
 }
 
-section.awards>.award-container {
+section.awards>.awards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -358,10 +357,11 @@ section.awards>.award-container {
     box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.1);
 }
 
-section.facilities .image{
+section.facilities .facility {
     position: relative;
 }
-section.facilities .image>.image-text{
+
+section.facilities .facility>.facility-text {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -371,6 +371,128 @@ section.facilities .image>.image-text{
     align-items: flex-end;
     padding: 17px;
     color: #fff;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #00614D 100%);;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #00614D 100%);
+    ;
     border-radius: 0px 0px 10px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: default;
+}
+
+section.facilities .btn-scroll {
+    margin: 0 5px;
+}
+
+section.testimonials>.testimonial-container {
+    margin: 50px 0;
+}
+
+.testimonial-container>input {
+    display: none;
+}
+
+.pages-container>.page {
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+input#page-1:checked~.pages-container .page-1,
+input#page-2:checked~.pages-container .page-2,
+input#page-3:checked~.pages-container .page-3 {
+    display: flex;
+
+}
+
+.page>.testimonial {
+    margin: 24px;
+    padding: 22px;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    max-width: 300px;
+    transition: transform 200ms linear;
+    cursor: default;
+}
+
+.page>.testimonial:hover {
+    transform: translateY(-4px);
+}
+
+.testimonial>.image {
+    border-radius: 50%;
+}
+
+.testimonial>.name {
+    margin: 32px;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.testimonial>.text {
+    margin: 5px 0 14px;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.testimonial-container>.buttons-container {
+    padding: 40px;
+    margin: -170px 0 -100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    height: 250px;
+}
+
+.buttons-container>label {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 9px;
+    background-color: #C4C4C44D;
+    cursor: pointer;
+    transition: transform 100ms linear;
+}
+
+.buttons-container>label:hover {
+    transform: scale(1.2);
+}
+
+input#page-1:checked~.buttons-container label[for="page-1"],
+input#page-2:checked~.buttons-container label[for="page-2"],
+input#page-3:checked~.buttons-container label[for="page-3"] {
+    background-color: var(--primary);
+    transform: scale(1.1);
+}
+
+section.blogs>.cards-container {
+    margin: 80px 0 32px;
+}
+
+section.doctor {
+    margin: 20px 90px;
+    padding: 76px 76px 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.15);
+    background: url(assets/images/doctor-bg.svg) no-repeat 100% 100%;
+    display: flex;
+}
+
+section.doctor>.doctor-container {
+    margin: 0 150px 76px 0;
+}
+
+.doctor-container>.title {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.doctor-container>.text {
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 25px 0 50px;
 }
