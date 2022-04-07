@@ -49,14 +49,14 @@ header {
     top: -26px;
     z-index: 1000;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
 }
 
 header[stuck] {
     box-shadow: 0 5px 16px -16px;
 }
 
-header>nav {
+header>nav.desktop {
     flex: 1;
 }
 
@@ -68,24 +68,37 @@ header .desktop>.header-items {
 }
 
 header>nav.mobile {
-    position: relative;
-    text-align: right;
     display: none;
+    margin-left: auto;
 }
 
-.mobile>img {
+.mobile>.btn-open {
     margin: 0 20px;
 }
 
-header .mobile>.header-items {
-    display: none;
-    list-style-type: none;
-    position: absolute;
-    z-index: 1000;
+#mobile-nav {
+    position: fixed;
+    z-index: 5000;
+    height: 100vh;
+    width: 0;
+    top: 0;
     right: 0;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
+    list-style-type: none;
+    text-align: right;
+    background-color: #ffffffaa;
+    backdrop-filter: blur(10px);
+    transition: width 300ms ease;
+}
+
+#mobile-nav>li {
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.btn-close {
+    font-size: 40px;
+    color: var(--primary);
 }
 
 section {

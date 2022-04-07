@@ -30,10 +30,10 @@ scrollContainer1.addEventListener("wheel", (evt) => {
 const scrollContainer2 = document.querySelector(".facilities-container");
 
 function scrollRight() {
-  sideScroll(scrollContainer2, 300, 5, 350)
+  sideScroll(scrollContainer2, 300, 5, 320)
 }
 function scrollLeft() {
-  sideScroll(scrollContainer2, -300, 5, 350)
+  sideScroll(scrollContainer2, -300, 5, 320)
 }
 
 function sideScroll(element, delta, speed, distance) {
@@ -54,3 +54,11 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(document.querySelector('header'));
+
+function openNav() {
+  document.getElementById("mobile-nav").style.width = "300px";
+}
+
+function closeNav() {
+  document.getElementById("mobile-nav").style.width = "0";
+}

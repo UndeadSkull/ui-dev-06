@@ -33,8 +33,12 @@
     section.experience {
         flex-wrap: wrap;
         max-width: min-content;
-        margin: auto;
+        margin: -50px auto 50px;
         padding: 20px;
+    }
+
+    section.experience::before {
+        height: 450px;
     }
 
     section.experience>.text-container {
@@ -60,10 +64,15 @@
         max-width: min-content;
     }
 
+    section.hero .mySlides .content {
+        top: 26vh;
+    }
+
     section.hero>.form-container {
         flex-wrap: wrap;
         min-width: 500px;
         width: 500px;
+        transform: translateY(-80%);
     }
 
     section.hero>.form-container label::after {
@@ -86,6 +95,11 @@
 
     section.about {
         flex-wrap: wrap;
+        margin-top: -175px;
+    }
+
+    section.about>.image-container {
+        gap: 2vw;
     }
 
     section.about>.image-container>.image {
@@ -134,9 +148,26 @@
         padding: 20px;
     }
 
+    section.hero {
+        padding: 0 20px;
+    }
+
+    footer {
+        padding: 0;
+    }
+
+    .cards-container {
+        gap: 10px;
+    }
+
     section.experience,
     section.doctor {
         margin: 20px;
+    }
+
+    .gallery-container {
+        margin: 30px -20px;
+        padding: 20px;
     }
 
     section.hero>.form-container {
@@ -155,19 +186,31 @@
 
     .page>.testimonial {
         display: grid;
-        grid-template-columns: .5fr 1.5fr;
+        grid-template-columns: .8fr 1.2fr;
         grid-template-rows: 2fr;
         grid-template-areas:
             "photo name"
             "text text"
         ;
-        max-width: 70%;
+        max-width: 70vw;
         margin-inline: auto;
         text-align: left;
     }
 
+    .testimonial>.name {
+        margin: auto;
+    }
+
+    .testimonial>.image>img {
+        width: min(20vw, 100px);
+    }
+
     .testimonial-container>.buttons-container {
         margin-bottom: -50px;
+    }
+
+    section.blogs>.cards-container {
+        margin-top: 32px;
     }
 }
 
