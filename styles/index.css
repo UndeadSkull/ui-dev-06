@@ -199,25 +199,6 @@ section.about>.section-content {
     padding: 10px;
 }
 
-section h3.section-heading {
-    font-size: clamp(26px, 3vw, 35px);
-    font-weight: 600;
-    font-weight: 1.9;
-    position: relative;
-    margin-bottom: 10px;
-}
-
-section h3.section-heading::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 31px;
-    border: 2px solid var(--primary);
-    background-color: var(--primary);
-    border-radius: 2px;
-}
-
 .section-content>.section-text {
     margin: 42px 0;
 }
@@ -295,7 +276,7 @@ section>.section-header {
     align-items: center;
 }
 
-.section-header>.section-heading {
+.section-header>.heading {
     flex: 1;
     margin: 0 20px 10px;
 }
@@ -306,7 +287,7 @@ section>.section-header {
 }
 
 section.packages {
-    background-image: url(assets/images/packages-bg.svg);
+    background-image: url(../assets/images/packages-bg.svg);
 }
 
 section>.section-text {
@@ -341,7 +322,6 @@ section>.section-text {
 
 .card>.card-text {
     margin: 10px 0 35px;
-    font-size: clamp(12px, 1.8vw, 16px);
     line-height: 1.9;
 }
 
@@ -462,7 +442,6 @@ input#page-3:checked~.pages-container .page-3 {
 .testimonial>.text {
     grid-area: text;
     margin: 5px 0 14px;
-    font-size: clamp(12px, 2vw, 16px);
     line-height: 1.9;
 }
 
@@ -508,7 +487,7 @@ section.doctor {
     padding: 76px 76px 0;
     border-radius: 10px;
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.15);
-    background: url(assets/images/doctor-bg.svg) no-repeat 100% 100%;
+    background: url(../assets/images/doctor-bg.svg) no-repeat 100% 100%;
     display: flex;
 }
 

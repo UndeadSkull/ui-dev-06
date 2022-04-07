@@ -144,7 +144,9 @@
     body>*,
     section.hero,
     section.about,
-    section.doctor {
+    section.doctor,
+    section.page-hero,
+    section.page-title {
         padding: 20px;
     }
 

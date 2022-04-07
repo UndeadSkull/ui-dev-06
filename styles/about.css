@@ -1,0 +1,23 @@
+.healing {
+    margin: 70px 90px;
+    padding: 80px;
+    padding-right: 30vw;
+    background: url(../assets/images/about_healing.png) no-repeat;
+    border-radius: 10px;
+}
+
+.healing>.heading {
+    color: #fff;
+}
+
+.healing>.heading::after {
+    background-color: #fff;
+    border-color: #fff;
+    width: 90px;
+    border-width: 1px;
+}
+
+.healing>.text {
+    margin-top: 50px;
+    color: #fff;
+}

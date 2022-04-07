@@ -23,6 +23,13 @@ h6 {
     font-family: 'Poppins', sans-serif;
 }
 
+.text,
+.card-text {
+    font-size: clamp(12px, 2vw, 16px);
+    line-height: 1.9;
+    font-weight: 400;
+}
+
 a {
     text-decoration: none;
 }
@@ -104,6 +111,75 @@ header>nav.mobile {
 section {
     padding: 75px 90px;
 }
+
+.page-hero {
+    padding: 50px 90px;
+    margin-top: 25px;
+    background: linear-gradient(0deg, #fff 30%, var(--secondary) 30%);
+    display: grid;
+    text-align: center;
+    justify-items: center;
+}
+
+.page-hero>.title {
+    margin: 13px;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--primary);
+}
+
+.page-hero>.text {
+    max-width: 550px;
+    text-align: center;
+}
+
+.page-hero>.image {
+    margin-top: 35px;
+}
+
+.page-hero>.image>img {
+    border-radius: 10px;
+    width: min(860px, 80vw);
+}
+
+section h3.heading {
+    font-size: clamp(26px, 3vw, 35px);
+    font-weight: 600;
+    font-weight: 1.9;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+section h3.heading::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 31px;
+    border: 2px solid var(--primary);
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+
+.page-title {
+    padding: 10px 90px;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
+.page-title>h3.heading::after {
+    width: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page-title>p.text {
+    margin-top: clamp(20px, 5vw, 60px);
+    width: min(1000px, 90%);
+}
+
 
 footer {
     --border: 1px solid #00614D1A;
