@@ -1,11 +1,10 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// setInterval(function() {
-//   plusSlides(1)
-// }, 5000);
+setInterval(function() {
+  plusSlides(1)
+}, 5000);
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
