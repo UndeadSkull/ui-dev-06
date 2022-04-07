@@ -3,7 +3,31 @@
     padding: 80px;
     padding-right: 30vw;
     background: url(../assets/images/about_healing.png) no-repeat;
+    background-size: cover;
     border-radius: 10px;
+    position: relative;
+}
+
+.healing::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 145px;
+    height: 125px;
+    background: url(../assets/images/dots.svg) no-repeat;
+    top: -30px;
+    left: -32px;
+}
+
+.healing::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 145px;
+    height: 125px;
+    background: url(../assets/images/dots.svg) no-repeat;
+    right: -50px;
+    top: 50%;
 }
 
 .healing>.heading {
@@ -20,4 +44,53 @@
 .healing>.text {
     margin-top: 50px;
     color: #fff;
+}
+
+section.cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+}
+
+section.cards-container::before {
+    position: absolute;
+    content: '';
+    background: url(../assets/images/packages-bg.svg);
+    transform: translateY(-250px);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+section.cards-container>.card {
+    padding: 40px 40px 0px;
+    border: 1px solid rgba(0, 97, 77, 0.25);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+section.cards-container>.card>.card-text {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.awards-container {
+    margin: 90px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.awards-container>.award {
+    background-color: #fff;
+    box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+    display: grid;
+    place-items: center;
+}section
+
+.award>img {
+    width: 180px;
+    height: 180px;
 }

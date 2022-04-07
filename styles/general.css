@@ -143,6 +143,21 @@ section {
     width: min(860px, 80vw);
 }
 
+section>.section-header {
+    display: flex;
+    align-items: center;
+}
+
+.section-header>.heading {
+    flex: 1;
+    margin: 0 20px 10px;
+}
+
+.section-header>.btn {
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
 section h3.heading {
     font-size: clamp(26px, 3vw, 35px);
     font-weight: 600;
@@ -160,6 +175,41 @@ section h3.heading::after {
     border: 2px solid var(--primary);
     background-color: var(--primary);
     border-radius: 2px;
+}
+
+.cards-container {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 30px;
+}
+
+.cards-container>.card {
+    /* max-width: 400px; */
+}
+
+.card>.card-image {
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.card-image>img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card>.card-title {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: clamp(18px, 2vw, 22px);
+}
+
+.card>.card-text {
+    margin: 10px 0 35px;
+    line-height: 1.9;
+}
+
+.card>.btn {
+    padding: 13px 45px;
 }
 
 .page-title {
@@ -180,6 +230,125 @@ section h3.heading::after {
     width: min(1000px, 90%);
 }
 
+
+section.testimonials>.testimonial-container {
+    margin: 50px 0;
+}
+
+.testimonial-container>input {
+    display: none;
+}
+
+.pages-container>.page {
+    display: none;
+    grid-auto-flow: column;
+    gap: 40px;
+    justify-content: center;
+}
+
+input#page-1:checked~.pages-container .page-1,
+input#page-2:checked~.pages-container .page-2,
+input#page-3:checked~.pages-container .page-3 {
+    display: grid;
+}
+
+.page>.testimonial {
+    padding: clamp(6px, 2vw, 22px);
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    max-width: 300px;
+    transition: transform 200ms linear;
+    cursor: default;
+}
+
+.page>.testimonial:hover {
+    transform: translateY(-4px);
+}
+
+.testimonial>.image {
+    grid-area: photo;
+    border-radius: 50%;
+}
+
+.testimonial>.image>img {
+    width: 121px;
+}
+
+.testimonial>.name {
+    grid-area: name;
+    margin: 32px;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.testimonial>.text {
+    grid-area: text;
+    margin: 5px 0 14px;
+    line-height: 1.9;
+}
+
+.testimonial-container>.buttons-container {
+    padding: 40px;
+    margin: -170px 0 -100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    height: 250px;
+}
+
+.buttons-container>label {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 9px;
+    background-color: #C4C4C44D;
+    cursor: pointer;
+    transition: transform 100ms linear;
+}
+
+.buttons-container>label:hover {
+    transform: scale(1.2);
+}
+
+input#page-1:checked~.buttons-container label[for="page-1"],
+input#page-2:checked~.buttons-container label[for="page-2"],
+input#page-3:checked~.buttons-container label[for="page-3"] {
+    background-color: var(--primary);
+    transform: scale(1.1);
+}
+
+section.blogs>.cards-container {
+    margin: 80px 0 32px;
+}
+
+section.doctor {
+    margin: 40px 90px;
+    padding: 76px 76px 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.15);
+    background: url(../assets/images/doctor-bg.svg) no-repeat 100% 100%;
+    display: flex;
+}
+
+section.doctor>.doctor-container {
+    margin: 0 150px 76px 0;
+}
+
+.doctor-container>.title {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.doctor-container>.text {
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 25px 0 50px;
+}
 
 footer {
     --border: 1px solid #00614D1A;

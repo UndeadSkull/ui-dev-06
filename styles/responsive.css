@@ -163,8 +163,12 @@
     }
 
     section.experience,
+    section.healing,
     section.doctor {
         margin: 20px;
+    }
+    section.healing{
+        padding: 20px;
     }
 
     .gallery-container {
