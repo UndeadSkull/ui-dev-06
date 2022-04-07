@@ -25,6 +25,10 @@
         padding: 20px 0;
     }
 
+    .pages-container>.page {
+        gap: 10px;
+    }
+
     .footer-top {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: .5fr 1fr .6fr;
@@ -55,9 +59,9 @@
         flex-wrap: wrap;
         min-width: 500px;
         width: 500px;
-        
     }
-    section.hero>.form-container label::after{
+
+    section.hero>.form-container label::after {
         display: none;
     }
 
@@ -66,13 +70,13 @@
     }
 
     section.hero h2 {
-        font-size: max(16px, 4vw);
-        line-height: max(20px, 5vw);
+        font-size: max(26px, 4vw);
+        line-height: max(28px, 5vw);
     }
 
     section.hero p {
-        font-size: max(8px, 1.4vw);
-        line-height: max(8px, 1.8vw);
+        font-size: max(10px, 1.4vw);
+        line-height: max(12px, 1.8vw);
     }
 
     section.about {
@@ -80,7 +84,7 @@
     }
 
     section.about>.image-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     }
 
     section.about>.image-container>.image {
@@ -123,9 +127,10 @@
     section.hero,
     section.about,
     section.doctor {
-        padding: 20px
+        padding: 20px;
     }
 
+    section.experience,
     section.doctor {
         margin: 20px;
     }
@@ -135,8 +140,29 @@
         max-width: 240px;
         padding: 20px 30px;
     }
+
     section.hero>.form-container>* {
         margin: 6px;
+    }
+
+    .pages-container>.page {
+        grid-auto-flow: row;
+    }
+
+    .page>.testimonial {
+        display: grid;
+        grid-template-columns: .5fr 1.5fr;
+        grid-template-rows: 2fr;
+        grid-template-areas:
+            "photo name"
+            "text text"
+        ;
+        max-width: 70%;
+        margin-inline: auto;
+        text-align: left;
+    }
+    .testimonial-container>.buttons-container{
+        margin-bottom: -50px;
     }
 }
 
@@ -151,6 +177,10 @@
 
     header a.btn>.btn-icon>img {
         width: 16px;
+    }
+
+    .cards-container {
+        grid-auto-flow: row;
     }
 
     .footer-top {

@@ -22,7 +22,7 @@ section.hero>.slider-container {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 110px;
+    padding: 15vw;
 }
 
 .content>h2,
@@ -34,7 +34,7 @@ section.hero>.slider-container {
 .content>h2 {
     font-weight: 700;
     font-size: 45px;
-    max-width: 400px;
+    max-width: max(30vw, 300px);
     margin: 13px 0;
 }
 
@@ -256,6 +256,7 @@ section.experience>.image-container {
     width: 585px;
     height: 447px;
 }
+
 section.experience>.image-container>img {
     height: 100%;
     object-fit: cover;
@@ -321,7 +322,7 @@ section>.section-text {
 
 .card-image>img {
     width: 100%;
-    height: 288px;
+    /* height: 288px; */
 }
 
 .card>.card-title {
@@ -332,7 +333,7 @@ section>.section-text {
 
 .card>.card-text {
     margin: 10px 0 35px;
-    font-size: 16px;
+    font-size: clamp(12px, 1.8vw, 16px);
     line-height: 1.9;
 }
 
@@ -408,20 +409,19 @@ section.testimonials>.testimonial-container {
 
 .pages-container>.page {
     display: none;
+    grid-auto-flow: column;
+    gap: 40px;
     justify-content: center;
-    align-items: flex-end;
 }
 
 input#page-1:checked~.pages-container .page-1,
 input#page-2:checked~.pages-container .page-2,
 input#page-3:checked~.pages-container .page-3 {
-    display: flex;
-
+    display: grid;
 }
 
 .page>.testimonial {
-    margin: 24px;
-    padding: 22px;
+    padding: clamp(6px,2vw,22px);
     border-radius: 10px;
     background-color: #fff;
     text-align: center;
@@ -435,10 +435,12 @@ input#page-3:checked~.pages-container .page-3 {
 }
 
 .testimonial>.image {
+    grid-area: photo;
     border-radius: 50%;
 }
 
 .testimonial>.name {
+    grid-area: name;
     margin: 32px;
     color: black;
     font-size: 20px;
@@ -446,8 +448,9 @@ input#page-3:checked~.pages-container .page-3 {
 }
 
 .testimonial>.text {
+    grid-area: text;
     margin: 5px 0 14px;
-    font-size: 16px;
+    font-size: clamp(12px, 2vw, 16px);
     line-height: 1.9;
 }
 
