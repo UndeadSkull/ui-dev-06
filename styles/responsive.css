@@ -14,21 +14,6 @@
 }
 
 @media only screen and (max-width:1300px) {
-    section.experience {
-        flex-wrap: wrap;
-        max-width: min-content;
-        margin: auto;
-        padding: 20px;
-    }
-
-    section.experience>.text-container {
-        padding: 20px 0;
-    }
-
-    .pages-container>.page {
-        gap: 10px;
-    }
-
     .footer-top {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: .5fr 1fr .6fr;
@@ -44,6 +29,22 @@
     .footer-bottom {
         padding: 20px;
     }
+
+    section.experience {
+        flex-wrap: wrap;
+        max-width: min-content;
+        margin: auto;
+        padding: 20px;
+    }
+
+    section.experience>.text-container {
+        padding: 20px 0;
+    }
+
+    .pages-container>.page {
+        gap: 10px;
+    }
+
 }
 
 @media only screen and (max-width:1000px) {
@@ -53,6 +54,10 @@
 
     header>nav.desktop {
         display: none;
+    }
+
+    .section-header>a.btn {
+        max-width: min-content;
     }
 
     section.hero>.form-container {
@@ -81,10 +86,6 @@
 
     section.about {
         flex-wrap: wrap;
-    }
-
-    section.about>.image-container {
-        /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     }
 
     section.about>.image-container>.image {
@@ -122,6 +123,9 @@
 }
 
 @media only screen and (max-width:720px) {
+    header {
+        top: -1px;
+    }
 
     body>*,
     section.hero,
@@ -161,7 +165,8 @@
         margin-inline: auto;
         text-align: left;
     }
-    .testimonial-container>.buttons-container{
+
+    .testimonial-container>.buttons-container {
         margin-bottom: -50px;
     }
 }
@@ -179,9 +184,6 @@
         width: 16px;
     }
 
-    .cards-container {
-        grid-auto-flow: row;
-    }
 
     .footer-top {
         grid-template-columns: 1fr;
@@ -198,5 +200,21 @@
     .footer-top>* {
         padding: 20px;
         border-right: none;
+    }
+
+    .cards-container {
+        grid-auto-flow: row;
+    }
+
+    .card>.card-text {
+        margin-bottom: 10px;
+    }
+
+    section.awards>.awards-container {
+        padding: 20px;
+    }
+
+    section.awards>.awards-container>.award {
+        margin: auto;
     }
 }

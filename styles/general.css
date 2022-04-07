@@ -29,6 +29,7 @@ a {
 
 .btn {
     display: inline-flex;
+    align-items: center;
     padding: 15px 20px;
     font-weight: 500;
     border: 1px solid var(--primary);
@@ -111,7 +112,7 @@ footer {
 }
 
 .details-basic>p {
-    margin-top: 30pxzz;
+    margin-top: 30px;
 }
 
 .details-contact {
@@ -144,6 +145,7 @@ footer {
 
 .footer-location>img {
     margin-top: 50px;
+    max-width: 100%;
 }
 
 .details-contact>.btn-contact {
