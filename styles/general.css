@@ -73,11 +73,13 @@ header .desktop>.header-items {
     justify-content: space-evenly;
     margin: 0 50px;
 }
-header nav .active{
+
+header nav .active {
     font-weight: 600;
     position: relative;
 }
-header nav .active::after{
+
+header nav .active::after {
     content: '';
     position: absolute;
     width: 27px;
@@ -195,10 +197,6 @@ section h3.heading::after {
     gap: 30px;
 }
 
-.cards-container>.card {
-    /* max-width: 400px; */
-}
-
 .card>.card-image {
     overflow: hidden;
     border-radius: 5px;
@@ -222,6 +220,34 @@ section h3.heading::after {
 
 .card>.btn {
     padding: 13px 45px;
+}
+
+section.card-simple-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, min(400px, 45%));
+    gap: clamp(10px, 2vw, 30px);
+    justify-content: center;
+}
+
+section.card-simple-container>.card-simple {
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+section.card-simple-container>.card-simple>.image {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section.card-simple-container>.card-simple>.image>img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+section.card-simple-container>.card-simple>.title,
+section.card-simple-container>.card-simple>.text {
+    padding: 0 clamp(10px, 2vw, 20px);
+    margin: clamp(5px, 1vw, 15px) 0;
 }
 
 .page-title {
