@@ -134,6 +134,26 @@
         margin-top: -100px;
         margin-left: auto;
     }
+
+    /* About Page */
+
+    section.cards-container {
+        display: block;
+    }
+
+    section.cards-container>.card {
+        padding: clamp(26px, 3vw, 35px);
+        margin: 20px 0;
+    }
+
+    section.cards-container>.card>.card-icon {
+        float: left;
+        margin: 10px 20px 10px 0;
+    }
+
+    section.cards-container>.card>.card-icon:first-of-type {
+        margin-bottom: 0;
+    }
 }
 
 @media only screen and (max-width:720px) {
@@ -167,7 +187,8 @@
     section.doctor {
         margin: 20px;
     }
-    section.healing{
+
+    section.healing {
         padding: 20px;
     }
 
@@ -253,6 +274,10 @@
 
     .cards-container {
         grid-auto-flow: row;
+    }
+
+    .cards-container>.card {
+        margin: 10px 0;
     }
 
     .card>.card-text {

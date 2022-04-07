@@ -73,6 +73,18 @@ header .desktop>.header-items {
     justify-content: space-evenly;
     margin: 0 50px;
 }
+header nav .active{
+    font-weight: 600;
+    position: relative;
+}
+header nav .active::after{
+    content: '';
+    position: absolute;
+    width: 27px;
+    border: 1px solid var(--primary);
+    left: 0;
+    bottom: -10px;
+}
 
 header>nav.mobile {
     display: none;
