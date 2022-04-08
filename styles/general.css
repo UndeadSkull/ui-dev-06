@@ -54,7 +54,6 @@ a {
     width: 145px;
     height: 125px;
     background: url(../assets/images/dots.svg) no-repeat;
-    overflow: hidden;
 }
 
 .dots:nth-child(3n+1)::before {
@@ -96,7 +95,7 @@ a {
 .input-row input,
 .input-row textarea {
     flex: 1;
-    margin: 20px 0;
+    margin: clamp(10px, 2vw, 20px) 0;
     padding: 14px 20px;
     border: none;
     outline: none;
