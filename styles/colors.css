@@ -15,7 +15,8 @@ h6 {
 p,
 a,
 .text,
-.card-text {
+.card-text,
+.card-content li {
     color: #373737CC;
 }
 

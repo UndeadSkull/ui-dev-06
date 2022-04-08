@@ -284,6 +284,21 @@
         margin-bottom: 10px;
     }
 
+    .card-wide {
+        flex-direction: column;
+    }
+
+    .card-wide>.card-image {
+        height: 200px;
+        width: 100%;
+        padding: 20px 20px 0;
+    }
+
+    .card-wide>.card-image>img {
+        height: 200px;
+        width: 100%;
+    }
+
     section.awards>.awards-container {
         padding: 20px;
     }
