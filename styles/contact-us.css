@@ -1,0 +1,84 @@
+.card-contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: clamp(10px, 2vw, 30px);
+}
+
+.card-contact {
+    padding: 0 40px;
+    min-height: 190px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-position 400ms ease;
+}
+
+.card-contact>.contact-text {
+    line-height: 1.3;
+}
+
+.card-contact:hover {
+    background-color: var(--primary);
+}
+
+.card-contact:hover>.contact-icon>svg {
+    fill: #fff;
+}
+
+.card-contact:hover>.contact-text {
+    color: #fff;
+}
+
+.card-contact>.contact-icon>svg {
+    fill: var(--primary);
+}
+
+.card-contact>.contact-text {
+    margin: 10px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background-color: var(--secondary);
+}
+
+.image-container {
+    background: url(../assets/images/contact-us_form.png) no-repeat 50% 50%;
+    background-size: cover;
+    border-radius: 10px;
+    display: grid;
+    place-items: flex-end;
+    flex: 3;
+    padding: 50px 40px;
+}
+
+.image-container img {
+    filter: contrast(0) brightness(100);
+    border-radius: 10px;
+}
+
+.form-container {
+    padding: 40px clamp(20px, 4vw, 70px);
+    border-radius: 10px;
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container>.title {
+    margin: 10px 0;
+    font-size: clamp(18px, 3vw, 24px);
+}
+
+.form-container .btn {
+    align-self: flex-end;
+    border-radius: 5px;
+    font-weight: 400;
+    padding: 13px 45px;
+}
