@@ -112,9 +112,9 @@
                 <label>
                     <div>
                         <div class="title">Check in</div>
-                        <div class="subtitle">Select your date</div>
+                        <div class="subtitle sub1">Select your date</div>
                     </div>
-                    <input type="date">
+                    <input type="date" class="date" onchange="dateChange(0)">
                 </label>
             </div>
             <div class="input-box">
@@ -124,9 +124,9 @@
                 <label>
                     <div>
                         <div class="title">Check out</div>
-                        <div class="subtitle">Select your date</div>
+                        <div class="subtitle sub2">Select your date</div>
                     </div>
-                    <input type="date">
+                    <input type="date" class="date" onchange="dateChange(1)">
                 </label>
             </div>
             <div class="input-box">
@@ -138,6 +138,7 @@
                         <div class="title">Travelers</div>
                         <div class="subtitle">Add guests</div>
                     </div>
+                    <input type="number" class="guests" placeholder="Add Guests">
                 </label>
             </div>
             <a href="#" class="btn">Book Now</a>

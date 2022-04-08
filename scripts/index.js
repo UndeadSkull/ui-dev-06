@@ -46,3 +46,7 @@ function sideScroll(element, delta, speed, distance) {
     }
   }, speed);
 }
+
+function dateChange(elem) {
+  document.querySelectorAll(".subtitle")[elem].innerHTML = document.querySelectorAll(".date")[elem].value
+}
