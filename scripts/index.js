@@ -32,6 +32,10 @@ sideScroll = (element, delta, speed, distance) => {
       window.clearInterval(slideTimer);
     }
   }, speed);
+  if (element.scrollLeft == 0 || element.scrollLeft + window.innerWidth >= element.scrollWidth) {
+    let direction = 100 * (delta / Math.abs(delta))
+    window.scrollBy({ top: direction, behavior: 'smooth' });
+  }
 }
 
 const scrollContainer1 = document.querySelector(".gallery-container");

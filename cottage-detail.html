@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cottages - Tigris Valley</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/cottage-detail.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+
+    <script defer src="scripts/general.js"></script>
+    <script defer src="scripts/cottage-detail.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="assets/Logo.svg" style="width: 215px" />
+        </a>
+        <nav class="desktop">
+            <ul class="header-items">
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="care-units.html">Care units</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <a href="javascript:void(0)" class="btn-open" onclick="openNav()">
+                <img src="assets/icons/Hamburger.svg" alt="">
+            </a>
+            <ul id="mobile-nav">
+                <li><a href="javascript:void(0)" class="btn-close" onclick="closeNav()">&times;</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="care-units.html">Care units</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a class="btn btn-secondary" href="#">
+            <div class="btn-text">Watch Video</div>
+            <div class="btn-icon">
+                <img src="assets/icons/video.svg" alt="">
+            </div>
+        </a>
+    </header>
+
+    <section class="gallery-container">
+        <a class="btn-scroll left" href="javascript:scrollLeft()">&#9664;</a>
+        <div class="image"><img src="assets/images/cottage-detail-1.png" alt=""></div>
+        <div class="image"><img src="assets/images/cottage-detail-2.png" alt=""></div>
+        <div class="image"><img src="assets/images/cottage-detail-1.png" alt=""></div>
+        <div class="image"><img src="assets/images/cottage-detail-2.png" alt=""></div>
+        <div class="image"><img src="assets/images/cottage-detail-1.png" alt=""></div>
+        <a class="btn-scroll right" href="javascript:scrollRight()">&#9654;</a>
+    </section>
+
+    <section class="newsletter">
+        <div class="content">
+            <h3 class="heading">Newsletter</h3>
+            <p class="text">
+                Subscribe To Get Notifications For The Latest News And Updates
+            </p>
+        </div>
+        <form action="" class="form input-row">
+            <input type="email" placeholder="Enter your email" name="newsletter-email" id="newsletter-email">
+            <a href="#" class="btn">
+                <img src="assets/icons/arrow-white.svg" alt="">
+            </a>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="details-basic">
+                <img src="assets/Logo.svg" alt="" width="280px">
+                <p>Tigris Valley manages to restore tranquillity in your life.
+                    We help to relieve you</p>
+            </div>
+            <div class="details-contact">
+                <a href="#" class="btn-contact">
+                    <div class="btn-image">
+                        <img src="assets/icons/whatsapp.svg" alt="">
+                    </div>
+                    <div class="btn-text">
+                        +91 91070 400 40
+                    </div>
+                </a>
+                <a href="#" class="btn-contact">
+                    <div class="btn-image">
+                        <img src="assets/icons/whatsapp.svg" alt="">
+                    </div>
+                    <div class="btn-text">
+                        +91 907 2277881
+                    </div>
+                </a>
+                <a href="#" class="btn-contact">
+                    <div class="btn-image">
+                        <img src="assets/icons/mail.svg" alt="">
+                    </div>
+                    <div class="btn-text">
+                        reservation@tigrisvalley.com
+                    </div>
+                </a>
+                <div class="social-container">
+                    <a href="#" class="btn-social">
+                        <img src="assets/icons/facebook.svg" alt="">
+                    </a>
+                    <a href="#" class="btn-social">
+                        <img src="assets/icons/instagram.svg" alt="">
+                    </a>
+                    <a href="#" class="btn-social">
+                        <img src="assets/icons/twitter.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="about-us.html">About us</a>
+                <a href="experience.html">Experience</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="care-units.html">Care units</a>
+                <a href="packages.html">Packages</a>
+                <a href="events.html">Events</a>
+                <a href="facilities.html">Facilities</a>
+                </ul>
+            </div>
+            <div class="footer-location">
+                <p>
+                    <strong>TIGRIS VALLEY</strong>
+                    <br>Tigris Valley, Markaz Knowledge City
+                    <br>Kannoth P.O, Calicut - 673580
+                </p>
+                <img src="assets/images/location.png" alt="">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © tigrisvalley.com
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+.gallery-container {
+    margin: 30px auto 0;
+    padding: 0px 60px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: clamp(10px, 2vw, 30px);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.gallery-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.gallery-container>.image,
+.gallery-container img {
+    border-radius: 4px;
+    max-width: 80vw;
+    width: 505px;
+    max-height: 345px;
+}
+
+.gallery-container .btn-scroll {
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    left: 20px;
+    color: var(--primary);
+    background-color: #fff;
+    padding: clamp(10px, 1vw, 21px);
+    width: clamp(20px, 5vw, 60px);
+    height: clamp(20px, 5vw, 60px);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 -30px;
+    cursor: pointer;
+    transition: box-shadow 200ms ease;
+    box-shadow: 0 2px 10px rgb(0, 0, 0, 0.5);
+}
+
+.gallery-container:hover .btn-scroll {
+    box-shadow: 0 2px 20px rgb(0, 0, 0, 0.5);
+}
