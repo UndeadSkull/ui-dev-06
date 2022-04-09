@@ -1,0 +1,145 @@
+.page-title {
+    background-color: var(--secondary);
+    margin: 20px auto 100px;
+}
+
+.page-title .heading {
+    margin-top: 30px;
+}
+
+.page-title p.text {
+    margin-top: 20px;
+}
+
+.page-title .search-container {
+    transform: translateY(60px);
+}
+
+.cottage-card {
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cottage-card>.card-image {
+    flex: 1;
+    min-width: 250px;
+}
+
+.cottage-card>.card-image>img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cottage-card>.card-content {
+    flex: 2;
+    padding: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 0.4fr 1.5fr .5fr 1fr;
+    grid-template-areas:
+        "name name . type"
+        "address address . ."
+        "desc desc . ."
+        "amneties amneties . ."
+        "price . buttons buttons"
+    ;
+    align-items: center;
+}
+
+.card-content .name {
+    grid-area: name;
+    font-size: 26px;
+}
+
+.card-content .address {
+    grid-area: address;
+    font-size: 18px;
+}
+
+.card-content .type {
+    grid-area: type;
+    justify-self: end;
+}
+
+.card-content .desc {
+    grid-area: desc;
+    font-size: 16px;
+}
+
+.card-content .amneties,
+.card-content .price {
+    display: flex;
+}
+
+.card-content .amneties {
+    grid-area: amneties;
+    column-gap: clamp(10px, 2vw, 30px);
+}
+
+.card-content .amneties>.item {
+    display: flex;
+    gap: 4px;
+}
+
+.card-content .amneties>.item>img {
+    max-height: 14px;
+}
+
+.card-content .price {
+    grid-area: price;
+}
+
+.card-content .price {
+    align-self: end;
+    align-items: end;
+}
+
+.card-content .price>.current-price {
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: var(--primary);
+    position: relative;
+}
+
+.card-content .price>.current-price::after {
+    content: 'per night';
+    position: absolute;
+    font-size: 10px;
+    font-weight: 500;
+    bottom: -5px;
+    right: 0;
+    color: var(--text);
+}
+
+.card-content .price>.current-price>span {
+    font-weight: 500;
+}
+
+.card-content .price>.old-price {
+    line-height: 1.7;
+    margin-left: 4px;
+}
+
+.card-content .price>.old-price>span {
+    text-decoration: line-through;
+}
+
+.card-content .buttons {
+    grid-area: buttons;
+    justify-self: end;
+    align-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+}
+
+.card-content .buttons>.btn {
+    border-color: var(--primary);
+    justify-content: center;
+    text-align: center;
+}

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cottages - Tigris Valley</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/cottages.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+
+    <script defer src="scripts/general.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="assets/Logo.svg" style="width: 215px" />
+        </a>
+        <nav class="desktop">
+            <ul class="header-items">
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="care-units.html">Care units</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <a href="javascript:void(0)" class="btn-open" onclick="openNav()">
+                <img src="assets/icons/Hamburger.svg" alt="">
+            </a>
+            <ul id="mobile-nav">
+                <li><a href="javascript:void(0)" class="btn-close" onclick="closeNav()">&times;</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="care-units.html">Care units</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a class="btn btn-secondary" href="#">
+            <div class="btn-text">Watch Video</div>
+            <div class="btn-icon">
+                <img src="assets/icons/video.svg" alt="">
+            </div>
+        </a>
+    </header>
+
+    <section class="page-title">
+        <h3 class="heading">Cottages</h3>
+        <p class="text">
+            Select your sutable cottage from the list
+        </p>
+        <form class="search-container">
+            <div class="input-box">
+                <div class="icon">
+                    <img src="assets/icons/calender.svg" alt="Calender icon">
+                </div>
+                <label>
+                    <div>
+                        <div class="title">Check in</div>
+                        <div class="subtitle sub1">1 Mar 2022</div>
+                    </div>
+                    <input type="date" class="book-input" onchange="inputChange(0)">
+                </label>
+            </div>
+            <div class="input-box">
+                <div class="icon">
+                    <img src="assets/icons/calender.svg" alt="Calender icon">
+                </div>
+                <label>
+                    <div>
+                        <div class="title">Check out</div>
+                        <div class="subtitle sub2">8 Mar 2022</div>
+                    </div>
+                    <input type="date" class="book-input" onchange="inputChange(1)">
+                </label>
+            </div>
+            <div class="input-box">
+                <div class="icon">
+                    <img src="assets/icons/user.svg" alt="User icon">
+                </div>
+                <label>
+                    <div>
+                        <div class="title">Travelers</div>
+                        <div class="subtitle">3</div>
+                    </div>
+                    <input type="number" class="book-input" oninput="inputChange(2)">
+                </label>
+            </div>
+            <a href="/cottages.html" class="btn">Change</a>
+        </form>
+    </section>
+
+    <section class="cottages">
+        <div class="cottage-card">
+            <div class="card-image">
+                <img src="assets/images/cottage-1.png" alt="">
+            </div>
+            <div class="card-content">
+                <h2 class="name">Cottage Name</h2>
+                <div class="address">Address of the cottage, West side east side etc</div>
+                <div class="type">Deluxe Room</div>
+                <div class="desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et odio ac ut nec et. Quam in placerat
+                    etiam arcu tincidunt odio. Venenatis non sapien,
+                </div>
+                <div class="amneties">
+                    <div class="item">
+                        <img src="assets/icons/cottage_ac.svg" alt="">
+                        TV
+                    </div>
+                    <div class="item">
+                        <img src="assets/icons/cottage_tv.svg" alt="">
+                        AC
+                    </div>
+                    <div class="item">
+                        <img src="assets/icons/cottage_tick.svg" alt="">
+                        Reception
+                    </div>
+                    <div class="item-4">30 More</div>
+                </div>
+                <div class="price">
+                    <div class="current-price">₹<span>8000</span></div>
+                    <div class="old-price">₹<span>9600</span></div>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn btn-secondary">View Details</a><a href="#" class="btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="cottage-card">
+            <div class="card-image">
+                <img src="assets/images/cottage-2.png" alt="">
+            </div>
+            <div class="card-content">
+                <h2 class="name">Cottage Name</h2>
+                <div class="address">Address of the cottage, West side east side etc</div>
+                <div class="type">Deluxe Room</div>
+                <div class="desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et odio ac ut nec et. Quam in placerat
+                    etiam arcu tincidunt odio. Venenatis non sapien,
+                </div>
+                <div class="amneties">
+                    <div class="item">
+                        <img src="assets/icons/cottage_ac.svg" alt="">
+                        TV
+                    </div>
+                    <div class="item">
+                        <img src="assets/icons/cottage_tv.svg" alt="">
+                        AC
+                    </div>
+                    <div class="item">
+                        <img src="assets/icons/cottage_tick.svg" alt="">
+                        Reception
+                    </div>
+                    <div class="item-4">30 More</div>
+                </div>
+                <div class="price">
+                    <div class="current-price">₹<span>8000</span></div>
+                    <div class="old-price">₹<span>9600</span></div>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn btn-secondary">View Details</a><a href="#" class="btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="cottage-card">
+            <div class="card-image">
+                <img src="assets/images/cottage-3.png" alt="">
+            </div>
+            <div class="card-content">
+                <h2 class="name">Cottage Name</h2>
+                <div class="address">Address of the cottage, West side east side etc</div>
+                <div class="type">Deluxe Room</div>
+                <div class="desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et odio ac ut nec et. Quam in placerat
+                    etiam arcu tincidunt odio. Venenatis non sapien,
+                </div>
+                <div class="amneties">
+                    <div class="item">
+                        <img src="assets/icons/cottage_ac.svg" alt="">
+                        TV
+                    </div>
+                    <div class="item">
+                        <img src="assets/icons/cottage_tv.svg" alt="">
+                        AC
+                    </div>
+                    <div class="item">
+                        <img src="assets/icons/cottage_tick.svg" alt="">
+                        Reception
+                    </div>
+                    <div class="item-4">30 More</div>
+                </div>
+                <div class="price">
+                    <div class="current-price">₹<span>8000</span></div>
+                    <div class="old-price">₹<span>9600</span></div>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn btn-secondary">View Details</a><a href="#" class="btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="cottage-card">
+            <div class="card-image">
+                <img src="assets/images/cottage-4.png" alt="">
+            </div>
+            <div class="card-content">
+                <h2 class="name">Cottage Name</h2>
+                <div class="address">Address of the cottage, West side east side etc</div>
+                <div class="type">Deluxe Room</div>
+                <div class="desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et odio ac ut nec et. Quam in placerat
+                    etiam arcu tincidunt odio. Venenatis non sapien,
+                </div>
+                <div class="amneties">
+                    <div class="item">
+                        <img src="assets/icons/cottage_ac.svg" alt="">
+                        TV
+                    </div>
+                    <div class="item">
+                        <img src="assets/icons/cottage_tv.svg" alt="">
+                        AC
+                    </div>
+                    <div class="item">
+                        <img src="assets/icons/cottage_tick.svg" alt="">
+                        Reception
+                    </div>
+                    <div class="item-4">30 More</div>
+                </div>
+                <div class="price">
+                    <div class="current-price">₹<span>8000</span></div>
+                    <div class="old-price">₹<span>9600</span></div>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn btn-secondary">View Details</a><a href="#" class="btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="newsletter">
+        <div class="content">
+            <h3 class="heading">Newsletter</h3>
+            <p class="text">
+                Subscribe To Get Notifications For The Latest News And Updates
+            </p>
+        </div>
+        <form action="" class="form input-row">
+            <input type="email" placeholder="Enter your email" name="newsletter-email" id="newsletter-email">
+            <a href="#" class="btn">
+                <img src="assets/icons/arrow-white.svg" alt="">
+            </a>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="details-basic">
+                <img src="assets/Logo.svg" alt="" width="280px">
+                <p>Tigris Valley manages to restore tranquillity in your life.
+                    We help to relieve you</p>
+            </div>
+            <div class="details-contact">
+                <a href="#" class="btn-contact">
+                    <div class="btn-image">
+                        <img src="assets/icons/whatsapp.svg" alt="">
+                    </div>
+                    <div class="btn-text">
+                        +91 91070 400 40
+                    </div>
+                </a>
+                <a href="#" class="btn-contact">
+                    <div class="btn-image">
+                        <img src="assets/icons/whatsapp.svg" alt="">
+                    </div>
+                    <div class="btn-text">
+                        +91 907 2277881
+                    </div>
+                </a>
+                <a href="#" class="btn-contact">
+                    <div class="btn-image">
+                        <img src="assets/icons/mail.svg" alt="">
+                    </div>
+                    <div class="btn-text">
+                        reservation@tigrisvalley.com
+                    </div>
+                </a>
+                <div class="social-container">
+                    <a href="#" class="btn-social">
+                        <img src="assets/icons/facebook.svg" alt="">
+                    </a>
+                    <a href="#" class="btn-social">
+                        <img src="assets/icons/instagram.svg" alt="">
+                    </a>
+                    <a href="#" class="btn-social">
+                        <img src="assets/icons/twitter.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="about-us.html">About us</a>
+                <a href="experience.html">Experience</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="care-units.html">Care units</a>
+                <a href="packages.html">Packages</a>
+                <a href="events.html">Events</a>
+                <a href="facilities.html">Facilities</a>
+                </ul>
+            </div>
+            <div class="footer-location">
+                <p>
+                    <strong>TIGRIS VALLEY</strong>
+                    <br>Tigris Valley, Markaz Knowledge City
+                    <br>Kannoth P.O, Calicut - 673580
+                </p>
+                <img src="assets/images/location.png" alt="">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © tigrisvalley.com
+        </div>
+    </footer>
+    
+</body>
+
+</html>

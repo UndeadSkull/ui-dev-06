@@ -63,7 +63,7 @@
     border-radius: 10px;
 }
 
-.form-container {
+.contact-form-container {
     padding: 40px clamp(20px, 4vw, 70px);
     border-radius: 10px;
     flex: 5;
@@ -71,12 +71,12 @@
     flex-direction: column;
 }
 
-.form-container>.title {
+.contact-form-container>.title {
     margin: 10px 0;
     font-size: clamp(18px, 3vw, 24px);
 }
 
-.form-container .btn {
+.contact-form-container .btn {
     align-self: flex-end;
     border-radius: 5px;
     font-weight: 400;

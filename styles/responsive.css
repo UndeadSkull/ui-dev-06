@@ -53,6 +53,17 @@
         gap: 10px;
     }
 
+    .cottage-card>.card-content {
+        grid-template-columns: 1fr .1fr;
+        grid-template-rows: .5fr .7fr 1fr .5fr .7fr 1fr;
+        grid-template-areas:
+            "name type"
+            "address address"
+            "desc desc"
+            "amneties amneties"
+            "price price"
+            "buttons buttons";
+    }
 }
 
 @media only screen and (max-width:1000px) {
@@ -68,22 +79,22 @@
         max-width: min-content;
     }
 
-    section.hero .mySlides .content {
+    section.hero .heroSlides .content {
         top: 26vh;
     }
 
-    section.hero>.form-container {
+    section>.search-container {
         flex-wrap: wrap;
         min-width: 500px;
         width: 500px;
         transform: translateY(-80%);
     }
 
-    section.hero>.form-container label::after {
+    section>.search-container label::after {
         display: none;
     }
 
-    section.hero>.form-container>.btn {
+    section>.search-container>.btn {
         margin: 10px;
     }
 
@@ -210,13 +221,13 @@
         padding: 20px;
     }
 
-    section.hero>.form-container {
+    section>.search-container {
         min-width: unset;
         max-width: 240px;
         padding: 20px 30px;
     }
 
-    section.hero>.form-container>* {
+    section>.search-container>* {
         margin: 6px;
     }
 
@@ -255,6 +266,10 @@
 }
 
 @media only screen and (max-width:550px) {
+    header .btn {
+        padding: 8px 10px;
+    }
+
     header .btn-text {
         display: none;
     }
@@ -264,7 +279,7 @@
     }
 
     header a.btn>.btn-icon>img {
-        width: 16px;
+        height: 12px;
     }
 
 
@@ -318,5 +333,9 @@
 
     section.awards>.awards-container>.award {
         margin: auto;
+    }
+
+    .cottage-card>.card-image {
+        max-height: 200px;
     }
 }

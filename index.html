@@ -67,7 +67,7 @@
 
     <section class="hero">
         <div class="slider-container">
-            <div class="mySlides fade">
+            <div class="heroSlides fade">
                 <img src="assets/images/hero-1.png" alt="Aerial view of a thick green forest" style="width:100%">
                 <div class="content">
                     <h2>
@@ -77,7 +77,7 @@
                     <p>We help to relieve you from strenuous tensions and anxieties of life.</p>
                 </div>
             </div>
-            <div class="mySlides fade">
+            <div class="heroSlides fade">
                 <img src="assets/images/hero-1.png" alt="Aerial view of a thick green forest" style="width:100%">
                 <div class="content">
                     <h2>
@@ -87,7 +87,7 @@
                     <p>We help to relieve you from strenuous tensions and anxieties of life.</p>
                 </div>
             </div>
-            <div class="mySlides fade">
+            <div class="heroSlides fade">
                 <img src="assets/images/hero-1.png" alt="Aerial view of a thick green forest" style="width:100%">
                 <div class="content">
                     <h2>
@@ -104,7 +104,7 @@
                 <img src="assets/icons/arrow-right.svg" alt="Right Arrow">
             </a>
         </div>
-        <form class="form-container">
+        <form class="search-container">
             <div class="input-box">
                 <div class="icon">
                     <img src="assets/icons/calender.svg" alt="Calender icon">
@@ -114,7 +114,7 @@
                         <div class="title">Check in</div>
                         <div class="subtitle sub1">Select your date</div>
                     </div>
-                    <input type="date" class="date" onchange="dateChange(0)">
+                    <input type="date" class="book-input" onchange="inputChange(0)">
                 </label>
             </div>
             <div class="input-box">
@@ -126,7 +126,7 @@
                         <div class="title">Check out</div>
                         <div class="subtitle sub2">Select your date</div>
                     </div>
-                    <input type="date" class="date" onchange="dateChange(1)">
+                    <input type="date" class="book-input" onchange="inputChange(1)">
                 </label>
             </div>
             <div class="input-box">
@@ -138,10 +138,10 @@
                         <div class="title">Travelers</div>
                         <div class="subtitle">Add guests</div>
                     </div>
-                    <input type="number" class="guests" placeholder="Add Guests">
+                    <input type="number" class="book-input" oninput="inputChange(2)">
                 </label>
             </div>
-            <a href="#" class="btn">Book Now</a>
+            <a href="/cottages.html" class="btn">Book Now</a>
         </form>
     </section>
 

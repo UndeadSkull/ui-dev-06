@@ -1,6 +1,8 @@
 :root {
     --primary: #00614D;
     --secondary: #F2F7F6;
+    --text: #373737CC;
+    --text-dark: #373737;
 }
 
 h1,
@@ -9,19 +11,19 @@ h3,
 h4,
 h5,
 h6 {
-    color: #373737;
+    color: var(--text-dark);
 }
 
 p,
 a,
 .text,
 .card-text,
-.card-content li {
-    color: #373737CC;
+.card-content {
+    color: var(--text);
 }
 
 a:not(.btn):hover {
-    color: #373737;
+    color: var(--text-dark);
 }
 
 .btn {
