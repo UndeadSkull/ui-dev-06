@@ -22,26 +22,14 @@ inputChange = (elem) => {
 }
 
 // Gallery And Facilities Scroll
-sideScroll = (element, delta, speed, distance) => {
-  step = delta / 50;
-  scrollAmount = 0;
-  var slideTimer = setInterval(function () {
-    element.scrollLeft += step;
-    scrollAmount += Math.abs(step);
-    if (scrollAmount >= distance) {
-      window.clearInterval(slideTimer);
-    }
-  }, speed);
-  if (element.scrollLeft == 0 || element.scrollLeft + window.innerWidth >= element.scrollWidth) {
-    let direction = 100 * (delta / Math.abs(delta))
-    window.scrollBy({ top: direction, behavior: 'smooth' });
-  }
-}
-
-const scrollContainer1 = document.querySelector(".gallery-container");
-scrollContainer1.addEventListener("wheel", (evt) => {
+const scrollContainer1 = document.querySelectorAll(".gallery-container");
+scrollContainer1[0].addEventListener("wheel", (evt) => {
   evt.preventDefault();
-  sideScroll(scrollContainer1, evt.deltaY, 5, 300);
+  sideScroll(scrollContainer1[0], evt.deltaY, 5, 300, false);
+});
+scrollContainer1[1].addEventListener("wheel", (evt) => {
+  evt.preventDefault();
+  sideScroll(scrollContainer1[1], evt.deltaY, 5, 300);
 });
 
 const scrollContainer2 = document.querySelector(".facilities-container");
