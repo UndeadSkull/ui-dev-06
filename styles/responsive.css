@@ -25,6 +25,17 @@
         ;
     }
 
+    .general .footer-top {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr .1fr 1;
+        grid-auto-flow: column;
+        grid-template-areas:
+            "basic basic contact"
+            "location location"
+            "links links"
+        ;
+    }
+
     .footer-top>*,
     .footer-bottom {
         padding: 20px;
@@ -174,6 +185,25 @@
     section.cards-container>.card>.card-icon:first-of-type {
         margin-bottom: 0;
     }
+
+    .general .footer-top {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr .1fr 1;
+        grid-auto-flow: column;
+        grid-template-areas:
+            "basic basic"
+            "location contact"
+            "links links"
+        ;
+    }
+
+    .general .details-contact {
+        padding: 20px 90px 0 20px;
+    }
+
+    .general .footer-location {
+        padding: 20px 0 0 90px;
+    }
 }
 
 @media only screen and (max-width:720px) {
@@ -272,6 +302,32 @@
     .gallery-container>.btn-scroll {
         opacity: 0;
         pointer-events: none;
+    }
+
+    .general .footer-top {
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr .6fr 1fr .6fr;
+        grid-auto-flow: column;
+        grid-template-areas:
+            "basic"
+            "location"
+            "contact"
+            "links"
+        ;
+    }
+
+    .general .details-basic {
+        display: grid;
+        padding: 20px;
+    }
+
+    .general .details-basic>p {
+        margin: 0;
+    }
+
+    .general .footer-top>*,
+    .general .footer-bottom {
+        padding: 20px;
     }
 }
 
