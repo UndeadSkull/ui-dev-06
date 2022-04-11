@@ -18,7 +18,8 @@ p,
 a,
 .text,
 .card-text,
-.card-content {
+.card-content,
+label {
     color: var(--text);
 }
 

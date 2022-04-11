@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Tigris Valley</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/booking.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+
+    <script defer src="scripts/general.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="assets/Logo.svg" style="width: 215px" />
+        </a>
+        <nav class="desktop">
+            <ul class="header-items">
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="care-units.html">Care units</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <a href="javascript:void(0)" class="btn-open" onclick="openNav()">
+                <img src="assets/icons/Hamburger.svg" alt="">
+            </a>
+            <ul id="mobile-nav">
+                <li><a href="javascript:void(0)" class="btn-close" onclick="closeNav()">&times;</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="care-units.html">Care units</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a class="btn btn-secondary" href="#">
+            <div class="btn-text">Watch Video</div>
+            <div class="btn-icon">
+                <img src="assets/icons/video.svg" alt="">
+            </div>
+        </a>
+    </header>
+    <section>
+        <br>
+        <a href="cottages.html">
+            < Change booking</a>
+    </section>
+    <section class="booking">
+        <div class="details-container">
+            <h2 class="name">Enter your details</h2>
+            <div class="detail-form">
+                <div class="detail-input">
+                    <label>Full Name</label><input type="text" placeholder="first name first">
+                </div>
+                <div class="detail-input">
+                    <label>Email ID</label><input type="email" placeholder="abcd@xyz.com">
+                </div>
+                <div class="detail-input">
+                    <label>Mobile Number</label><input type="tel" placeholder="9999999999">
+                </div>
+                <div class="detail-input">
+                    <label></label><a href="#" class="btn">Send OTP</a>
+                </div>
+                <div class="detail-input">
+                    <label>Enter OTP</label><input type="text" placeholder="000000">
+                </div>
+                <div class="detail-input">
+                    <label></label><a href="#" class="btn disabled">Submit</a>
+                </div>
+            </div>
+        </div>
+        <div class="booking-container">
+            <div class="booking-box">
+                <div class="cottage-basics">
+                    <div>
+                        <h2 class="name">Cottages Name</h2>
+                        <p class="text">Address of the cottage, West side east side etc</p>
+                    </div>
+                    <div class="image">
+                        <img src="assets/images/booking.png" alt="">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <input type="date" name="checkin" id="checkin" onchange="dateChange(0)">
+                    <hr>
+                    <input type="date" name="checkout" id="checkout" onchange="dateChange(1)">
+                    <hr>
+                    <input type="number" value="3" name="guests" id="guests">
+                </div>
+                <div class="input-row">
+                    <input type="name" value="Deluxe Rooms" name="type" id="type" readonly>
+                    <hr>
+                    <input type="name" value="Sea View" name="feature" id="feature" readonly>
+                </div>
+                <div class="total">
+                    <div class="title">Total Amount to Pay</div>
+                    <div class="amount">₹<span>8000</span></div>
+                </div>
+                <a href="#" class="btn">Complete booking</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
