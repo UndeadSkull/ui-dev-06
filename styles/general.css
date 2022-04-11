@@ -736,10 +736,16 @@ section.doctor>.doctor-container {
     font-size: clamp(13px, 2vw, 16px);
 }
 
+.booking-container .input-row>input[type="date"] {
+    background-color: #fff;
+    color: #fff;
+}
+
 .booking-container .input-row>input[type="date"]::before {
     position: absolute;
     pointer-events: none;
     font-size: clamp(13px, 2vw, 16px);
+    color: var(--text-dark);
 }
 
 .booking-container .input-row>input#checkin::before {
@@ -807,9 +813,10 @@ section.doctor>.doctor-container {
     justify-content: center;
     text-align: center;
 }
+
 /* Footer */
 
-footer{
+footer {
     --border: 1px solid #00614D1A;
 }
 
@@ -821,7 +828,7 @@ footer{
         "basic basic location location"
         "basic basic contact contact"
         "links links contact contact"
-        ;
+    ;
 }
 
 .general .details-basic {
