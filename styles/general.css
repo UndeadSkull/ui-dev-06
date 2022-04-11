@@ -468,6 +468,7 @@ section.hero .input-box:not(:last-of-type)>label::after {
     color: rgba(55, 55, 55, 0.38);
     font-size: 12px;
     font-weight: 500;
+    text-align: left;
 }
 
 .input-box>label>input {
@@ -495,6 +496,8 @@ section.hero .input-box:not(:last-of-type)>label::after {
 
 .search-container>a.btn {
     padding: 20px 42px;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Testimonials */
@@ -694,7 +697,7 @@ section.doctor>.doctor-container {
     position: absolute;
     font-size: 10px;
     font-weight: 500;
-    bottom: -5px;
+    bottom: -7px;
     right: 0;
     color: var(--text);
 }
