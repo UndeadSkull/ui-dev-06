@@ -91,9 +91,6 @@
 
 .card-content .price {
     grid-area: price;
-}
-
-.card-content .price {
     align-self: end;
     align-items: end;
 }
