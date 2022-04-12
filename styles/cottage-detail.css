@@ -3,7 +3,7 @@
     padding: 0px 60px;
     display: grid;
     grid-auto-flow: column;
-    gap: clamp(10px, 2vw, 30px);
+    gap: var(--clamp30);
     overflow-x: scroll;
     overflow-y: hidden;
     position: relative;
@@ -33,8 +33,8 @@
     left: 20px;
     color: var(--primary);
     background-color: #fff;
-    width: clamp(20px, 5vw, 60px);
-    height: clamp(20px, 5vw, 60px);
+    width: var(--clamp60);
+    height: var(--clamp60);
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -75,7 +75,7 @@
 .details-container>.read-more {
     font-family: 'Poppins', sans-serif;
     color: #00614D87;
-    font-size: 16px;
+    font-size: var(--clamp16);
     margin: 65px 0;
     line-height: 3;
 }
@@ -96,4 +96,5 @@
     grid-template-columns: .1fr 1fr;
     column-gap: 8px;
     place-items: center;
+    font-size: 14px;
 }

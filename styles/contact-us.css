@@ -1,7 +1,7 @@
 .card-contact-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: clamp(10px, 2vw, 30px);
+    gap: var(--clamp30);
 }
 
 .card-contact {

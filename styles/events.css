@@ -1,9 +1,9 @@
 .banner-container .card-simple {
-    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow2);
 }
 
 .banner-container .card-content {
-    padding: clamp(10px, 2vw, 20px) clamp(20px, 5vw, 90px);
+    padding: var(--clamp20) clamp(20px, 5vw, 90px);
 }
 
 .card-simple {

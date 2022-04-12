@@ -1,3 +1,12 @@
+:root {
+    --shadow1: 0px 0px 70px rgba(0, 0, 0, 0.1);
+    --shadow2: 0px 5px 70px rgba(0, 0, 0, 0.15);
+    --clamp16: clamp(13px, 2vw, 16px);
+    --clamp20: clamp(10px, 2vw, 20px);
+    --clamp30: clamp(10px, 2vw, 30px);
+    --clamp60: clamp(20px, 5vw, 60px);
+}
+
 *,
 *::before,
 *::after {
@@ -8,7 +17,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: var(--clamp16);
     font-weight: 400;
     overflow-x: hidden;
 }
@@ -24,12 +33,12 @@ h6 {
 
 .text,
 .card-text {
-    font-size: clamp(13px, 2vw, 16px);
     line-height: 1.9;
     font-weight: 400;
 }
 
 a {
+    font-size: 14px;
     text-decoration: none;
 }
 
@@ -100,12 +109,12 @@ a {
 .input-row input,
 .input-row textarea {
     flex: 1;
-    margin: clamp(10px, 2vw, 20px) 0;
+    margin: var(--clamp20) 0;
     padding: 14px 20px;
     border: none;
     outline: none;
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: var(--clamp16);
     line-height: 1.3;
     border-radius: 10px;
 }
@@ -277,7 +286,7 @@ h3.heading::after {
 }
 
 .page-title>p.text {
-    margin-top: clamp(20px, 5vw, 60px);
+    margin-top: var(--clamp60);
     width: min(1000px, 90%);
 }
 
@@ -319,7 +328,7 @@ h3.heading::after {
 .card-simple-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, min(400px, 45%));
-    gap: clamp(10px, 2vw, 30px);
+    gap: var(--clamp30);
     justify-content: center;
 }
 
@@ -340,7 +349,7 @@ h3.heading::after {
 
 .card-simple>.title,
 .card-simple>.text {
-    padding: 0 clamp(10px, 2vw, 20px);
+    padding: 0 var(--clamp20);
     margin: clamp(5px, 1vw, 15px) 0;
 }
 
@@ -348,7 +357,7 @@ h3.heading::after {
 
 .card-wide {
     display: flex;
-    box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow1);
     border-radius: 10px;
     margin: 50px 0;
     position: relative;
@@ -427,7 +436,7 @@ section>.search-container {
     padding: 25px 60px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.14);
+    box-shadow: var(--shadow2);
     transform: translateY(-50%);
     min-width: 880px;
     max-width: 85%;
@@ -601,7 +610,7 @@ section.doctor {
     margin: 40px 90px;
     padding: 76px 76px 0;
     border-radius: 10px;
-    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow2);
     background: url(../assets/images/doctor-bg.svg) no-repeat 100% 100%;
     display: flex;
 }
@@ -616,7 +625,6 @@ section.doctor>.doctor-container {
 }
 
 .doctor-container>.text {
-    font-size: 16px;
     line-height: 1.9;
     margin: 25px 0 50px;
 }
@@ -736,7 +744,6 @@ section.doctor>.doctor-container {
     width: 100%;
     margin: 0;
     padding: 14px 0 14px clamp(0px, 2vw, 16px);
-    font-size: clamp(13px, 2vw, 16px);
 }
 
 .booking-container .input-row>input[type="date"] {
@@ -747,7 +754,6 @@ section.doctor>.doctor-container {
 .booking-container .input-row>input[type="date"]::before {
     position: absolute;
     pointer-events: none;
-    font-size: clamp(13px, 2vw, 16px);
     color: var(--text-dark);
 }
 
@@ -790,7 +796,6 @@ section.doctor>.doctor-container {
 }
 
 .total>.title {
-    font-size: 16px;
     position: relative;
 }
 
@@ -869,7 +874,6 @@ footer {
 .general .footer-location {
     grid-area: location;
     padding: 70px 90px 0 90px;
-    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -886,7 +890,7 @@ footer {
 
 .general .btn-contact>.btn-text {
     margin: 0 12px;
-    font-size: 16px;
+    font-size: var(--clamp16);
 }
 
 .general .social-container {
@@ -898,7 +902,6 @@ footer {
 }
 
 .general .footer-bottom {
-    font-size: 16px;
     padding: 30px 90px;
     color: var(--text-dark);
 }
