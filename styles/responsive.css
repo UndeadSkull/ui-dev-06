@@ -77,13 +77,13 @@
     }
 
     section.hero h2 {
-        font-size: max(26px, 4vw);
-        line-height: max(28px, 5vw);
+        font-size: max(30px, 4vw);
+        line-height: max(30px, 5vw);
     }
 
     section.hero p {
-        font-size: max(10px, 1.4vw);
-        line-height: max(12px, 1.8vw);
+        font-size: max(12px, 1.4vw);
+        line-height: max(16px, 1.8vw);
     }
 
     section.doctor {
@@ -145,7 +145,6 @@
     }
 
     body>*,
-    section.hero,
     section.about,
     section.doctor,
     section.page-hero,
@@ -154,7 +153,7 @@
     }
 
     section.hero {
-        padding: 0;
+        padding: 0 20px;
     }
 
     footer {
@@ -262,6 +261,14 @@
     .general .footer-top>*,
     .general .footer-bottom {
         padding: 20px;
+    }
+
+    #enquire-now{
+        right: 10px;
+        bottom: 10px;
+        width: 50px;
+        height: 50px;
+        padding: 8px;
     }
 }
 
