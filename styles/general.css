@@ -132,11 +132,16 @@ header {
     position: sticky;
     top: -26px;
     z-index: 1000;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0);
     border-radius: 0 0 10px 10px;
+    -webkit-transition: background 300ms ease;
+    -moz-transition: background 300ms ease;
+    -o-transition: background 300ms ease;
+    transition: background 300ms ease;
 }
 
 header[stuck] {
+    background: rgba(255, 255, 255, 1);
     box-shadow: 0 5px 16px -16px;
 }
 
@@ -161,6 +166,7 @@ header nav .active::after {
     position: absolute;
     width: 27px;
     border: 1px solid var(--primary);
+    background-color: var(--primary);
     left: 0;
     bottom: -10px;
 }
@@ -462,6 +468,7 @@ section.hero .input-box:not(:last-of-type)>label::after {
     position: absolute;
     height: 28px;
     border: 1px solid var(--text);
+    background-color: var(--text);
     right: -40px;
     top: calc(50% - 14px);
     pointer-events: none;
@@ -904,4 +911,41 @@ footer {
 .general .footer-bottom {
     padding: 30px 90px;
     color: var(--text-dark);
+}
+
+#enquire-now {
+    position: fixed;
+    z-index: 1000;
+    right: 20px;
+    bottom: 20px;
+    background-color: #00614D;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    padding: 15px;
+}
+#enquire-now svg {
+    transition: opacity 300ms ease;
+}
+
+#enquire-now .enquire-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-40%);
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+#enquire-now:hover svg {
+    opacity: 0;
+}
+
+#enquire-now:hover .enquire-text {
+    opacity: 1;
 }

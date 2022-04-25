@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tigris Valley</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/index_new.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+
+    <script defer src="scripts/general.js"></script>
+    <script defer src="scripts/index.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="assets/Logo.svg" style="width: 215px" />
+        </a>
+        <nav class="desktop">
+            <ul class="header-items">
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="care-units.html">Care units</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <a href="javascript:void(0)" class="btn-open" onclick="openNav()">
+                <img src="assets/icons/Hamburger.svg" alt="">
+            </a>
+            <ul id="mobile-nav">
+                <li><a href="javascript:void(0)" class="btn-close" onclick="closeNav()">&times;</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="care-units.html">Care units</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a class="btn btn-secondary" href="#">
+            <div class="btn-text">Watch Video</div>
+            <div class="btn-icon">
+                <img src="assets/icons/video.svg" alt="">
+            </div>
+        </a>
+    </header>
+
+    <section class="hero">
+        <div class="slider-container">
+            <div class="heroSlides fade">
+                <img src="assets/images/hero-1.png" alt="Aerial view of a thick green forest" style="width:100%">
+                <div class="content">
+                    <h2>
+                        A different pace for a peaceful life
+                    </h2>
+                    <p>Tigris Valley manages to restore tranquillity in your life.</p>
+                    <p>We help to relieve you from strenuous tensions and anxieties of life.</p>
+                </div>
+            </div>
+            <div class="heroSlides fade">
+                <img src="assets/images/hero-1.png" alt="Aerial view of a thick green forest" style="width:100%">
+                <div class="content">
+                    <h2>
+                        A different pace for a great life
+                    </h2>
+                    <p>Tigris Valley manages to restore tranquillity in your life.</p>
+                    <p>We help to relieve you from strenuous tensions and anxieties of life.</p>
+                </div>
+            </div>
+            <div class="heroSlides fade">
+                <img src="assets/images/hero-1.png" alt="Aerial view of a thick green forest" style="width:100%">
+                <div class="content">
+                    <h2>
+                        A new pace for a peaceful life
+                    </h2>
+                    <p>Tigris Valley manages to restore tranquillity in your life.</p>
+                    <p>We help to relieve you from strenuous tensions and anxieties of life.</p>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">
+                <img src="assets/icons/arrow-left.svg" alt="Left Arrow">
+            </a>
+            <a class="next" onclick="plusSlides(1)">
+                <img src="assets/icons/arrow-right.svg" alt="Right Arrow">
+            </a>
+        </div>
+        <form class="search-container">
+            <div class="input-box">
+                <div class="icon">
+                    <img src="assets/icons/calender.svg" alt="Calender icon">
+                </div>
+                <label>
+                    <div>
+                        <div class="title">Check in</div>
+                        <div class="subtitle sub1">Select your date</div>
+                    </div>
+                    <input type="date" class="book-input" onchange="inputChange(0)">
+                </label>
+            </div>
+            <div class="input-box">
+                <div class="icon">
+                    <img src="assets/icons/calender.svg" alt="Calender icon">
+                </div>
+                <label>
+                    <div>
+                        <div class="title">Check out</div>
+                        <div class="subtitle sub2">Select your date</div>
+                    </div>
+                    <input type="date" class="book-input" onchange="inputChange(1)">
+                </label>
+            </div>
+            <div class="input-box">
+                <div class="icon">
+                    <img src="assets/icons/user.svg" alt="User icon">
+                </div>
+                <label>
+                    <div>
+                        <div class="title">Travelers</div>
+                        <div class="subtitle">Add guests</div>
+                    </div>
+                    <input type="number" class="book-input" oninput="inputChange(2)">
+                </label>
+            </div>
+            <a href="cottages.html" class="btn">Book Now</a>
+        </form>
+    </section>
+
+    <section class="about">
+        <div class="image-container">
+            <div class="image">
+                <img src="assets/images/about-1.png" alt="A path through a forest">
+            </div>
+            <div class="image">
+                <img src="assets/images/about-2.png" alt="Table lamp on bedside table">
+            </div>
+            <div class="image">
+                <img src="assets/images/about-3.png" alt="Candles and fragrance sticks">
+            </div>
+            <div class="image">
+                <img src="assets/images/about-4.png" alt="Topview of a person with their feet in pool water">
+            </div>
+        </div>
+        <div class="section-content">
+            <h3 class="heading">
+                About
+            </h3>
+            <p class="section-text">
+                Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+                space away from city chaos, filled with natural care and wellness. We strive to recreate the
+                conventional system of natural health care integrated through traditional treatments in a lush valley
+                below the Western Ghats.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et neque at
+                turpis nunc. Elementum cursus tellus duis pellentesque senectus sem sed. Adipiscing amet, amet, enim
+                diam aliquam id quisque. Arcu proin urna imperdiet amet. Id vitae tempus orci donec sed nunc, dictum
+                erat.
+            </p>
+            <div class="section-buttons">
+                <a href="cottages.html" class="btn">Book Now</a>
+                <a href="contact-us.html" class="btn btn-secondary">Contact us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <div class="image-container">
+            <img src="assets/images/experience.png" alt="A person getting a hot stone massage">
+            <div class="image-text">
+                Experience Tigris Valley
+            </div>
+        </div>
+        <div class="text-container">
+            <p class="section-text">
+                Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+                space away from city chaos, filled with natural care and wellness. We strive to recreate the
+                conventional system of natural health care integrated through traditional treatments in a lush valley
+                below the Western Ghats.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et neque at
+                turpis nunc. Elementum cursus tellus duis pellentesque senectus sem sed. Adipiscing amet, amet, enim
+                diam aliquam id quisque. Arcu proin urna imperdiet amet. Id vitae tempus orci donec sed nunc, dictum
+                erat.
+            </p>
+        </div>
+    </section>
+
+    <section class="packages">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-packages.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Packages at Tigris Valley
+            </h3>
+            <a class="btn btn-secondary" href="packages.html">
+                <div class="btn-text">Read More</div>
+                <div class="btn-icon">
+                    <img src="assets/icons/read-more.svg" alt="">
+                </div>
+            </a>
+        </div>
+        <p class="section-text">
+            Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+            space away from city chaos, filled with natural care and wellness. We strive to recreate the
+            conventional system of natural health care integrated through traditional treatments in a lush valley
+            below the Western Ghats.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et neque at
+            turpis nunc. Elementum cursus tellus duis pellentesque senectus sem sed. Adipiscing amet, amet, enim
+            diam aliquam id quisque. Arcu proin urna imperdiet amet. Id vitae tempus orci donec sed nunc, dictum
+            erat.
+        </p>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-1.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Relaxation</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+                    space away from city chaos, filled with natural
+                    care and wellness.
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-2.png" alt="">
+                </div>
+                <h4 class="card-title">Massage Treatments</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+                    space away from city chaos, filled with natural
+                    care and wellness.
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-3.png" alt="">
+                </div>
+                <h4 class="card-title">Therapy Treatments</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+                    space away from city chaos, filled with natural
+                    care and wellness.
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-gallery.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Gallery
+            </h3>
+            <a class="btn btn-secondary" href="#">
+                <div class="btn-text">See More</div>
+                <div class="btn-icon">
+                    <img src="assets/icons/read-more.svg" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="gallery-container">
+            <div class="image"><img src="assets/images/gallery-1.png" alt=""></div>
+            <div class="image"><img src="assets/images/gallery-2.png" alt=""></div>
+            <div class="image"><img src="assets/images/gallery-3.png" alt=""></div>
+            <div class="image"><img src="assets/images/gallery-1.png" alt=""></div>
+            <div class="image"><img src="assets/images/gallery-2.png" alt=""></div>
+        </div>
+    </section>
+
+    <section class="awards">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-awards.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Awards and Accreditation
+            </h3>
+        </div>
+        <div class="awards-container">
+            <div class="award"><img src="assets/images/award-1.png" alt=""></div>
+            <div class="award"><img src="assets/images/award-2.png" alt=""></div>
+            <div class="award"><img src="assets/images/award-3.png" alt=""></div>
+            <div class="award"><img src="assets/images/award-4.png" alt=""></div>
+        </div>
+    </section>
+
+    <section class="rooms">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-rooms.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Rooms of Tigris Valley
+            </h3>
+            <a class="btn btn-secondary" href="cottages.html">
+                <div class="btn-text">Read More</div>
+                <div class="btn-icon">
+                    <img src="assets/icons/read-more.svg" alt="">
+                </div>
+            </a>
+        </div>
+        <p class="section-text">
+            Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+            space away from city chaos, filled with natural care and wellness. We strive to recreate the
+            conventional system of natural health care integrated through traditional treatments in a lush valley
+            below the Western Ghats.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et neque at
+            turpis nunc. Elementum cursus tellus duis pellentesque senectus sem sed. Adipiscing amet, amet, enim
+            diam aliquam id quisque. Arcu proin urna imperdiet amet. Id vitae tempus orci donec sed nunc, dictum
+            erat.
+        </p>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/room-1.png" alt="">
+                </div>
+                <h4 class="card-title">Classic Rooms</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare
+                </div>
+                <a href="cottages.html" class="btn">Book now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/room-2.png" alt="">
+                </div>
+                <h4 class="card-title">Deluxe Rooms</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare
+                </div>
+                <a href="cottages.html" class="btn">Book now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/room-3.png" alt="">
+                </div>
+                <h4 class="card-title">Presidential Suite</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare
+                </div>
+                <a href="cottages.html" class="btn">Book now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/room-4.png" alt="">
+                </div>
+                <h4 class="card-title">Royal Suite</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare
+                </div>
+                <a href="cottages.html" class="btn">Book now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="facilities">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-facilities.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Facilities of Tigris Valley
+            </h3>
+            <a class="btn-scroll left hide" href="javascript:scrollLeft()">
+                <img src="assets/icons/facility-left.svg" alt="">
+            </a>
+            <a class="btn-scroll right" href="javascript:scrollRight()">
+                <img src="assets/icons/facility-right.svg" alt="">
+            </a>
+        </div>
+        <div class="facilities-container gallery-container">
+            <div class="image">
+                <img src="assets/images/facility-1.png" alt="">
+                <h4 class="image-text">Multi cuisine restaurant</h4>
+            </div>
+            <div class="image">
+                <img src="assets/images/facility-2.png" alt="">
+                <h4 class="image-text">Wellness restaurant</h4>
+            </div>
+            <div class="image">
+                <img src="assets/images/facility-3.png" alt="">
+                <h4 class="image-text">Fitness centre</h4>
+            </div>
+            <div class="image">
+                <img src="assets/images/facility-4.png" alt="">
+                <h4 class="image-text">Rooms</h4>
+            </div>
+            <div class="image">
+                <img src="assets/images/facility-1.png" alt="">
+                <h4 class="image-text">Multi cuisine restaurant</h4>
+            </div>
+            <div class="image">
+                <img src="assets/images/facility-2.png" alt="">
+                <h4 class="image-text">Wellness restaurant</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-testimonials.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Testimonials
+            </h3>
+        </div>
+        <div class="testimonial-container">
+            <input type="radio" name="tab" id="page-1" checked="">
+            <input type="radio" name="tab" id="page-2">
+            <input type="radio" name="tab" id="page-3">
+            <div class="pages-container">
+                <div class="page page-1">
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-1.png" alt=""></div>
+                        <h4 class="name">Jenny Wilson</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive to</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-2.png" alt=""></div>
+                        <h4 class="name">Wade Warren</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness.</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-3.png" alt=""></div>
+                        <h4 class="name">Leslie Alexander</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive</p>
+                    </div>
+                </div>
+                <div class="page page-2">
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-3.png" alt=""></div>
+                        <h4 class="name">Leslie Alexander</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness.</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-1.png" alt=""></div>
+                        <h4 class="name">Jenny Wilson</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive to</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-2.png" alt=""></div>
+                        <h4 class="name">Wade Warren</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive to</p>
+                    </div>
+                </div>
+                <div class="page page-3">
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-2.png" alt=""></div>
+                        <h4 class="name">Wade Warren</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive to</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-1.png" alt=""></div>
+                        <h4 class="name">Jenny Wilson</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive to</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-3.png" alt=""></div>
+                        <h4 class="name">Leslie Alexander</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive to</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <label for="page-1"></label>
+                <label for="page-2"></label>
+                <label for="page-3"></label>
+            </div>
+        </div>
+    </section>
+
+    <section class="blogs">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-blogs.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Blogs
+            </h3>
+            <a class="btn btn-secondary" href="#">
+                <div class="btn-text">Read More</div>
+                <div class="btn-icon">
+                    <img src="assets/icons/read-more.svg" alt="">
+                </div>
+            </a>
+        </div>
+
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/blog-1.png" alt="Leaves in rain">
+                </div>
+                <h4 class="card-title">Tigris Relaxation - Lorem ipsum dolor sit amet.</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+                    space.
+                </div>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/blog-2.png" alt="Towel, flowers, candle and lotion">
+                </div>
+                <h4 class="card-title">Massage Treatments - Lorem ipsum dolor sit amet.</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+                    space away from city chaos.
+                </div>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/blog-3.png" alt="Woman in a spa">
+                </div>
+                <h4 class="card-title">Therapy Treatments - Lorem ipsum dolor sit amet.</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+                    space away.
+                </div>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="doctor">
+        <div class="doctor-container">
+            <h2 class="title">Ask a Doctor</h2>
+            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, placeat blanditiis harum
+                eius
+                eveniet voluptas nostrum ad recusandae magni sequi quidem voluptates ullam delectus veritatis iure
+                dolore
+                quas temporibus! Fuga repudiandae praesentium excepturi dignissimos qui error nihil odit, facilis amet.
+            </p>
+            <a href="contact-us.html#contact-form" class="btn">Make an appointment</a>
+        </div>
+        <img src="assets/images/doctor-img.svg" alt="calender, pen and clock">
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="details-basic">
+                <img src="assets/Logo.svg" alt="" width="280px">
+                <p>Tigris Valley manages to restore tranquillity in your life.
+                    We help to relieve you</p>
+            </div>
+            <div class="details-contact">
+                <a href="tel:+919107040040" class="btn-contact">
+                    <div class="btn-image">
+                        <img src="assets/icons/whatsapp.svg" alt="">
+                    </div>
+                    <div class="btn-text">
+                        +91 91070 400 40
+                    </div>
+                </a>
+                <a href="tel:+919072277881" class="btn-contact">
+                    <div class="btn-image">
+                        <img src="assets/icons/whatsapp.svg" alt="">
+                    </div>
+                    <div class="btn-text">
+                        +91 907 2277881
+                    </div>
+                </a>
+                <a href="mailto:reservation@tigrisvalley.com" class="btn-contact">
+                    <div class="btn-image">
+                        <img src="assets/icons/mail.svg" alt="">
+                    </div>
+                    <div class="btn-text">
+                        reservation@tigrisvalley.com
+                    </div>
+                </a>
+                <div class="social-container">
+                    <a href="#" class="btn-social">
+                        <img src="assets/icons/facebook.svg" alt="">
+                    </a>
+                    <a href="#" class="btn-social">
+                        <img src="assets/icons/instagram.svg" alt="">
+                    </a>
+                    <a href="#" class="btn-social">
+                        <img src="assets/icons/twitter.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="about-us.html">About us</a>
+                <a href="experience.html">Experience</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="care-units.html">Care units</a>
+                <a href="packages.html">Packages</a>
+                <a href="events.html">Events</a>
+                <a href="facilities.html">Facilities</a>
+                </ul>
+            </div>
+            <div class="footer-location">
+                <p>
+                    <strong>TIGRIS VALLEY</strong>
+                    <br>Tigris Valley, Markaz Knowledge City
+                    <br>Kannoth P.O, Calicut - 673580
+                </p>
+                <img src="assets/images/location.png" alt="">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © tigrisvalley.com
+        </div>
+    </footer>
+    <a href="#" id="enquire-now">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 512 512">
+            <path
+                d="M191.1 224c0-17.72-14.34-32.04-32-32.04L144 192c-35.34 0-64 28.66-64 64.08v47.79C80 339.3 108.7 368 144 368H160c17.66 0 32-14.36 32-32.06L191.1 224zM256 0C112.9 0 4.583 119.1 .0208 256L0 296C0 309.3 10.75 320 23.1 320S48 309.3 48 296V256c0-114.7 93.34-207.8 208-207.8C370.7 48.2 464 141.3 464 256v144c0 22.09-17.91 40-40 40h-110.7C305 425.7 289.7 416 272 416H241.8c-23.21 0-44.5 15.69-48.87 38.49C187 485.2 210.4 512 239.1 512H272c17.72 0 33.03-9.711 41.34-24H424c48.6 0 88-39.4 88-88V256C507.4 119.1 399.1 0 256 0zM368 368c35.34 0 64-28.7 64-64.13V256.1C432 220.7 403.3 192 368 192l-16 0c-17.66 0-32 14.34-32 32.04L320 335.9C320 353.7 334.3 368 352 368H368z" />
+        </svg>
+        <div class="enquire-text">
+            Enquire Now
+        </div>
+    </a>
+</body>
+
+</html>

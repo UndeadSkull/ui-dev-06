@@ -1,7 +1,7 @@
-@media only screen and (min-width:1500px) {
+@media only screen and (min-width:1550px) {
 
     body>* {
-        max-width: 1500px;
+        max-width: 1550px;
         margin: auto;
     }
 
@@ -65,7 +65,7 @@
         flex-wrap: wrap;
         min-width: 500px;
         width: 500px;
-        transform: translateY(-80%);
+        transform: translateY(-110%);
     }
 
     section>.search-container label::after {
@@ -154,7 +154,7 @@
     }
 
     section.hero {
-        padding: 0 20px;
+        padding: 0;
     }
 
     footer {
