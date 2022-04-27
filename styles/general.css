@@ -615,25 +615,33 @@ section.blogs>.cards-container {
 
 section.doctor {
     margin: 40px 90px;
-    padding: 76px 76px 0;
     border-radius: 10px;
     box-shadow: var(--shadow2);
-    background: url(../assets/images/doctor-bg.svg) no-repeat 100% 100%;
+    background: url(../assets/images/doctor-bg.svg) no-repeat;
+    background-color: #e1d1bf;
+    background-size: cover;
     display: flex;
 }
 
 section.doctor>.doctor-container {
-    margin: 0 150px 76px 0;
+    width: min(600px,100%);
 }
 
 .doctor-container>.title {
     font-size: clamp(32px, 4vw, 42px);
     font-weight: 700;
+    color: #375811;
 }
 
 .doctor-container>.text {
     line-height: 1.9;
     margin: 25px 0 50px;
+}
+.doctor-container>.btn {
+    background-color: #FFC600;
+    border-color: #FFC600;
+    color: var(--text-dark);
+    font-weight: 600;
 }
 
 /* Newsletter */
