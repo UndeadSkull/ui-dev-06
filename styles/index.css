@@ -240,6 +240,36 @@ section.awards>.awards-container {
     box-shadow: var(--shadow1);
 }
 
+.cards-container.scroll {
+    margin: 0 -90px;
+    padding: 0 90px 45px;
+    overflow-x: scroll;
+}
+
+section.packages>.cards-container.scroll {
+    grid-template-columns: repeat(9, minmax(300px, 100%));
+}
+
+section.rooms>.cards-container.scroll {
+    grid-template-columns: repeat(6, minmax(300px, 100%));
+}
+
+.cards-container.scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+.cards-container.scroll::-webkit-scrollbar-track {
+    background: #3737371C;
+    border-radius: 10px;
+    margin-right: 60vw;
+    margin-left: 90px;
+}
+
+.cards-container.scroll::-webkit-scrollbar-thumb {
+    background: #00614D33;
+    border-radius: 10px;
+}
+
 section.facilities .image {
     position: relative;
 }
@@ -411,6 +441,18 @@ section.facilities .btn-scroll {
     section.experience>.image-container>.image-text {
         padding: 20px;
     }
+}
+
+@media only screen and (max-width:720px) {
+    .cards-container.scroll {
+        margin: 0 -20px;
+        padding: 0 20px 20px;
+    }
+
+    .cards-container.scroll::-webkit-scrollbar {
+        height: 0px;
+    }
+
 }
 
 @media only screen and (max-width:550px) {
