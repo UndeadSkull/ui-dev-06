@@ -10,6 +10,10 @@ const mobileNav = document.getElementById("mobile-nav")
 openNav = () => mobileNav.style.width = "300px"
 closeNav = () => mobileNav.style.width = "0"
 
+// Video Modal
+const modal = document.querySelector(".video-container")
+const showModal = () => modal.showModal()
+
 // Horizontal Scrolling
 sideScroll = (element, delta, speed, distance, flag = true) => {
     step = delta / 50;
