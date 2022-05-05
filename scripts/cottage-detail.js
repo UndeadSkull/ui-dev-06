@@ -1,10 +1,6 @@
 // Gallery Scroll
 
 const scrollContainer = document.querySelector(".gallery-container");
-scrollContainer.addEventListener("wheel", (evt) => {
-    evt.preventDefault();
-    sideScroll(scrollContainer, evt.deltaY, 5, 300);
-});
 
 const imageWidth = scrollContainer.children[1].offsetWidth;
 const scrollWidth = imageWidth + (imageWidth * .1)

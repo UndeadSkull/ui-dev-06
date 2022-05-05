@@ -24,7 +24,7 @@ section.hero>.slider-container {
 
 .heroSlides .content {
     position: absolute;
-    top: 50%;
+    top: 42%;
     transform: translateY(-50%);
     padding: 0 8vw;
 }

@@ -8,6 +8,10 @@ section.testimonials {
     visibility: hidden;
 }
 
+.booking-container>.booking-box :is(.price, .total) {
+    display: none;
+}
+
 /* General */
 :root {
     --shadow1: 0px 0px 70px rgba(0, 0, 0, 0.1);
