@@ -283,7 +283,7 @@ section.awards>.awards-container {
 }
 
 section.packages>.cards-container.scroll {
-    grid-template-columns: repeat(17, minmax(300px, 100%));
+    grid-template-columns: repeat(12, minmax(300px, 100%));
 }
 
 section.rooms>.cards-container.scroll {

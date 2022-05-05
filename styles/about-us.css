@@ -9,19 +9,18 @@
 }
 
 .healing>.heading {
-    color: #fff;
+    color: #6F8B5D;
 }
 
 .healing>.heading::after {
-    background-color: #fff;
-    border-color: #fff;
+    background-color: #6F8B5D;
+    border-color: #6F8B5D;
     width: 90px;
     border-width: 1px;
 }
 
 .healing>.text {
     margin-top: 50px;
-    color: #fff;
 }
 
 section.cards-container {
