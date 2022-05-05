@@ -29,6 +29,12 @@ section.hero>.slider-container {
     padding: 0 15vw;
 }
 
+.content.dark>h2,
+.content.dark>p {
+    color: #320605;
+    line-height: 1.3;
+}
+
 .content>h2,
 .content>p {
     color: #fff;
@@ -299,7 +305,7 @@ section.facilities .btn-scroll {
 .footer-top {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: .8fr .4fr;
+    grid-template-rows: 2fr .5fr;
     grid-template-areas:
         "basic contact location location"
         "links links location location";
@@ -312,6 +318,7 @@ section.facilities .btn-scroll {
 }
 
 .details-basic>p {
+    font-size: 14px;
     margin-top: 30px;
 }
 
@@ -319,14 +326,13 @@ section.facilities .btn-scroll {
     grid-area: contact;
     padding: 70px 38px 38px 0;
     border-bottom: var(--border);
-    border-right: var(--border);
+    margin-top: auto;
 }
 
 .footer-links {
     grid-area: links;
     padding-left: 90px;
     border-bottom: var(--border);
-    border-right: var(--border);
     display: grid;
     place-content: center;
     align-items: center;
@@ -337,6 +343,7 @@ section.facilities .btn-scroll {
 
 .footer-location {
     grid-area: location;
+    border-left: var(--border);
     border-bottom: var(--border);
     padding: 70px 90px;
     line-height: 1.5;

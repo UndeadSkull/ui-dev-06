@@ -56,7 +56,7 @@
                 <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
         </nav>
-        <a class="btn btn-secondary" href="javascript:showModal();">
+        <a class="btn btn-secondary" href="javascript:showVideo();">
             <div class="btn-text">Watch Video</div>
             <div class="btn-icon">
                 <img src="assets/icons/video.svg" alt="">
@@ -65,18 +65,16 @@
     </header>
 
     <dialog class="video-container">
-        <iframe src="https://www.youtube-nocookie.com/embed/zrFIo-4L7gc?modestbranding=1&showinfo=0&rel=0"
-            frameborder="0"></iframe>
-        <form method="dialog">
-            <button type="submit">X</button>
-        </form>
+        <iframe src="https://www.youtube-nocookie.com/embed/zrFIo-4L7gc?modestbranding=1&showinfo=0&rel=0&enablejsapi=1"
+            frameborder="0" allowfullscreen></iframe>
+        <button onclick="hideVideo()">X</button>
     </dialog>
 
     <section class="hero">
         <div class="slider-container">
             <div class="heroSlides fade">
                 <img src="assets/images/hero-1.png" alt="Aerial view of a thick green forest" style="width:100%">
-                <div class="content">
+                <div class="content dark">
                     <h2>
                         Setting The Pace For A Peaceful Life
                     </h2>
@@ -92,16 +90,16 @@
                     <p>Get in touch with your soul, and feel your mind & body becoming one in this peaceful haven.</p>
                 </div>
             </div>
-            <!-- <div class="heroSlides fade">
-                <img src="assets/images/hero-1.png" alt="Aerial view of a thick green forest" style="width:100%">
-                <div class="content">
+            <div class="heroSlides fade">
+                <img src="assets/images/hero-3.png" alt="Aerial view of a thick green forest" style="width:100%">
+                <div class="content dark">
                     <h2>
-                        A new pace for a peaceful life
+                        A different pace for a peaceful life
                     </h2>
                     <p>Tigris Valley manages to restore tranquillity in your life.</p>
                     <p>We help to relieve you from strenuous tensions and anxieties of life.</p>
                 </div>
-            </div> -->
+            </div>
             <a class="prev" onclick="plusSlides(-1)">
                 <img src="assets/icons/arrow-left.svg" alt="Left Arrow">
             </a>
@@ -753,8 +751,12 @@
         <div class="footer-top">
             <div class="details-basic">
                 <img src="assets/Logo.svg" alt="" width="280px">
-                <p>Tigris Valley manages to restore tranquillity in your life.
-                    We help to relieve you</p>
+                <p>
+                    At Tigris we offer treatment programmes that are tailored to meet the needs of each
+                    individual - in terms of nutrition, therapies, and workouts. Each programme is a mix of
+                    the AYUSH medicinal philosophies of Ayurveda, Yoga, Unani, Siddha, and Homeopathy
+                    - giving you well-rounded holistic care that caters to both mind & body.
+                </p>
             </div>
             <div class="details-contact">
                 <a href="tel:+919107040040" class="btn-contact">

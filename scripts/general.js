@@ -12,7 +12,11 @@ closeNav = () => mobileNav.style.width = "0"
 
 // Video Modal
 const modal = document.querySelector(".video-container")
-const showModal = () => modal.showModal()
+const showVideo = () => modal.showModal()
+const hideVideo = () => {
+    modal.close();
+    document.querySelector("iframe").contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+}
 
 // Horizontal Scrolling
 sideScroll = (element, delta, speed, distance, flag = true) => {
