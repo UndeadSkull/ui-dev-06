@@ -249,6 +249,11 @@ section.awards>.awards-container {
     box-shadow: var(--shadow1);
 }
 
+.awards-container img {
+    max-width: 250px;
+    padding: 50px;
+}
+
 .cards-container.scroll {
     margin: 0 -90px;
     padding: 0 90px 45px;

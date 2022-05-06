@@ -67,6 +67,7 @@ section.cards-container>.card>.card-text {
 }
 
 section .award>img {
+    padding: 30px;
     width: 180px;
     height: 180px;
     border-radius: 10px;

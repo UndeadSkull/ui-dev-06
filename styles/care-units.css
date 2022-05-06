@@ -14,7 +14,7 @@
 }
 
 section .award>img {
-    width: 180px;
+    padding: 30px;
     height: 180px;
     border-radius: 10px;
 }

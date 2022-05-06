@@ -1,6 +1,6 @@
 @media only screen and (min-width:1550px) {
 
-    body>* {
+    body>footer {
         max-width: 1550px;
         margin: auto;
     }

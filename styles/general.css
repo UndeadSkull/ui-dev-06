@@ -356,6 +356,11 @@ h3.heading::after {
     gap: 30px;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
 .card>.card-image {
     overflow: hidden;
     border-radius: 5px;
@@ -379,6 +384,9 @@ h3.heading::after {
 
 .card>.btn {
     padding: 13px 45px;
+    width: fit-content;
+    height: fit-content;
+    margin-top: auto;
 }
 
 /* Simple Card */
@@ -898,12 +906,12 @@ footer {
 
 .general .footer-top {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
     grid-template-rows: .8fr .6fr 1fr;
     grid-template-areas:
-        "basic basic location location"
-        "basic basic contact contact"
-        "links links contact contact"
+        "basic location"
+        "basic contact"
+        "links contact"
     ;
 }
 
@@ -917,7 +925,7 @@ footer {
 
 .general .details-basic>p {
     margin-left: 40px;
-    font-size: 14px;
+    /* font-size: 14px; */
     line-height: 1.3;
 }
 
