@@ -1,28 +1,15 @@
-header:not([stuck]) img {
-    filter: brightness(0) invert(1);
-}
-
-header:not([stuck]) a {
-    color: #ffffffea;
-    border-color: #ffffffea;
-}
-
-header:not([stuck]) a:hover {
-    color: #fff;
-    border-color: #fff;
-}
-
 /* Hero Section */
 
 section.hero {
-    margin-top: -98px;
-    padding: 0;
+    margin-top: 26px;
+    padding: 5px 90px;
 }
 
 section.hero>.slider-container {
     position: relative;
     z-index: 50;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .slider-container>.heroSlides {
@@ -30,15 +17,16 @@ section.hero>.slider-container {
 }
 
 .heroSlides>img {
-    height: 100vh;
+    height: 75vh;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .heroSlides .content {
     position: absolute;
-    top: 45%;
+    top: 42%;
     transform: translateY(-50%);
-    padding: 0 15vw;
+    padding: 0 8vw;
 }
 
 .content.dark>h2,
@@ -55,7 +43,7 @@ section.hero>.slider-container {
 
 .content>h2 {
     font-weight: 700;
-    font-size: 46px;
+    font-size: 45px;
     max-width: max(30vw, 300px);
     margin: 13px 0;
 }
@@ -110,30 +98,15 @@ section.hero>.slider-container {
 }
 
 /* Search Container */
-section>.search-container img {
-    filter: brightness(0) invert(1);
-}
-
-section>.search-container .title {
-    color: #fff;
-}
-
-section>.search-container .subtitle {
-    color: #ffffff99;
-}
-
 section>.search-container {
-    max-width: 70%;
-    transform: translateY(-150%);
-    background: rgba(255, 255, 255, .2);
-    backdrop-filter: blur(2px);
+    max-width: 78%;
 }
 
 /* About Section */
 
 section.about {
     display: flex;
-    margin-top: -120px;
+    margin-top: -60px;
     padding: 164px 90px;
     background: linear-gradient(145deg, rgba(0, 97, 77, 0) 6%, rgba(0, 97, 78, .1) 15%, rgba(0, 97, 77, 0) 50%);
 }
@@ -449,12 +422,8 @@ section.facilities .btn-scroll {
 
 @media only screen and (max-width:1000px) {
 
-    body section.hero {
-        padding: 0;
-    }
-
     section.hero .heroSlides .content {
-        top: 34vh;
+        top: 26vh;
     }
 
     section.about {
