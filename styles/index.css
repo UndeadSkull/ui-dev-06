@@ -1,13 +1,14 @@
-header:not([stuck]) img {
+header:not([stuck]) :not(.mobile) img {
     filter: brightness(0) invert(1);
 }
 
-header:not([stuck]) a {
+header:not([stuck])>a,
+header:not([stuck])>:not(.mobile) a {
     color: #ffffffea;
     border-color: #ffffffea;
 }
 
-header:not([stuck]) a:hover {
+header:not([stuck]) :not(.mobile) a:hover {
     color: #fff;
     border-color: #fff;
 }
