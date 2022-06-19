@@ -1,18 +1,37 @@
-header:not([stuck]) :not(.mobile) img {
-    filter: brightness(0) invert(1);
+.whatsapp-ico{
+    fill: white;
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+    background-color: #4dc247;
+    border-radius: 50%;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    /* box-shadow: 2px 2px 11px rgba(0,0,0,0.7); */
+    position: fixed;
+    bottom: 20px;
+    right : 20px;
+    z-index: 10;
 }
 
-header:not([stuck])>a,
-header:not([stuck])>:not(.mobile) a:not(.droplink) {
+.whatsapp-ico:hover{
+    box-shadow: 2px 2px 11px rgba(0,0,0,0.7);
+}
+
+
+/*
+header:not([stuck]) img {
+    filter: brightness(0) invert(1);
+}*/
+
+header:not([stuck]) a {
     color: #ffffffea;
     border-color: #ffffffea;
 }
 
-header:not([stuck]) :not(.mobile) a:not(.droplink):hover {
+header:not([stuck]) a:hover {
     color: #fff;
     border-color: #fff;
 }
-
 
 /* Hero Section */
 

@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tigris Valley | The healthy wellness world</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/index_new.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+
+    <script defer src="scripts/general.js"></script>
+    <script defer src="scripts/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="assets/Logo.svg" style="width: 215px" />
+        </a>
+        <nav class="desktop">
+            <ul class="header-items">
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="care-units.html">Care units</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="packages.html">Programmes</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <a href="javascript:void(0)" class="btn-open" onclick="openNav()">
+                <img src="assets/icons/Hamburger.svg" alt="">
+            </a>
+            <ul id="mobile-nav">
+                <li><a href="javascript:void(0)" class="btn-close" onclick="closeNav()">&times;</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="care-units.html">Care units</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="packages.html">Programmes</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a class="btn btn-secondary" href="javascript:showVideo();">
+            <div class="btn-text">Watch Video</div>
+            <div class="btn-icon">
+                <img src="assets/icons/video.svg" alt="">
+            </div>
+        </a>
+    </header>
+
+    <dialog class="video-container">
+        <iframe src="https://www.youtube-nocookie.com/embed/zrFIo-4L7gc?modestbranding=1&showinfo=0&rel=0&enablejsapi=1"
+            frameborder="0" allowfullscreen></iframe>
+        <button onclick="hideVideo()">X</button>
+    </dialog>
+
+    <section class="hero">
+        <div class="slider-container">
+            <div class="heroSlides fade">
+                <img src="assets/images/hero-1.png" alt="" style="width:100%">
+                <div class="content">
+                    <h2>
+                        Setting The Pace For A Peaceful Life
+                    </h2>
+                    <p>Tigris Valley helps you slow down and reset, allowing tranquility to enter your life.</p>
+                </div>
+            </div>
+            <div class="heroSlides fade">
+                <img src="assets/images/hero-4.png" alt="" style="width:100%">
+                <div class="content">
+                    <h2>
+                        Where Mind & Body Becomes One
+                    </h2>
+                    <p>Get in touch with your soul, and feel your mind & body becoming one in this peaceful haven.</p>
+                </div>
+            </div>
+            <div class="heroSlides fade">
+                <img src="assets/images/hero-3.png" alt="" style="width:100%">
+                <div class="content dark">
+                    <h2>
+                        Surrounded By Peace
+                    </h2>
+                    <p>Let yourself relax, and enjoy the present.</p>
+                </div>
+            </div>
+            <div class="heroSlides fade">
+                <img src="assets/images/hero-2.png" alt="" style="width:100%">
+                <div class="content dark">
+                    <h2>
+                        Find Yourself
+                    </h2>
+                    <p>Get in touch with your true self.</p>
+                </div>
+            </div>
+            <div class="heroSlides fade">
+                <img src="assets/images/hero-3.png" alt="" style="width:100%">
+                <div class="content dark">
+                    <h2>
+                        A Cradle Of Comfort
+                    </h2>
+                    <p>Reclaim the the joy of great night's sleep.</p>
+                </div>
+            </div>
+            <div class="heroSlides fade">
+                <img src="assets/images/hero-2.png" alt="" style="width:100%">
+                <div class="content dark">
+                    <h2>
+                        The Best Care
+                    </h2>
+                    <p>Let our accomplished doctors rejuvenate you.</p>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">
+                <img src="assets/icons/arrow-left.svg" alt="Left Arrow">
+            </a>
+            <a class="next" onclick="plusSlides(1)">
+                <img src="assets/icons/arrow-right.svg" alt="Right Arrow">
+            </a>
+        </div>
+        <form class="search-container">
+            <div class="input-box">
+                <div class="icon">
+                    <img src="assets/icons/calender.svg" alt="Calender icon">
+                </div>
+                <label>
+                    <div>
+                        <div class="title">Check in</div>
+                        <div class="subtitle sub1">Select your date</div>
+                    </div>
+                    <input type="date" class="book-input" onchange="inputChange(0)">
+                </label>
+            </div>
+            <div class="input-box">
+                <div class="icon">
+                    <img src="assets/icons/calender.svg" alt="Calender icon">
+                </div>
+                <label>
+                    <div>
+                        <div class="title">Check out</div>
+                        <div class="subtitle sub2">Select your date</div>
+                    </div>
+                    <input type="date" class="book-input" onchange="inputChange(1)">
+                </label>
+            </div>
+            <div class="input-box">
+                <div class="icon">
+                    <img src="assets/icons/user.svg" alt="User icon">
+                </div>
+                <label>
+                    <div>
+                        <div class="title">Travelers</div>
+                        <div class="subtitle">Add guests</div>
+                    </div>
+                    <input type="number" class="book-input" oninput="inputChange(2)">
+                </label>
+            </div>
+            <a href="cottages.html" class="btn">Book Now</a>
+        </form>
+    </section>
+
+    <section class="about">
+        <div class="image-container">
+            <div class="image">
+                <img src="assets/images/about-1.png" alt="A path through a forest">
+            </div>
+            <div class="image">
+                <img src="assets/images/about-2.png" alt="Table lamp on bedside table">
+            </div>
+            <div class="image">
+                <img src="assets/images/about-3.png" alt="Candles and fragrance sticks">
+            </div>
+            <div class="image">
+                <img src="assets/images/about-4.png" alt="Topview of a person with their feet in pool water">
+            </div>
+        </div>
+        <div class="section-content">
+            <h3 class="heading">
+                A Story of Rejuvenation
+            </h3>
+            <p class="section-text">
+                Located in the foothills of Wayanad, Tigris Valley is a holistic destination wellness retreat.
+                We offer an escape from the chaos of the city, into an opulent sanctuary that
+                rejuvenates you with traditional care rooted in nature's nurturing magic. From the time
+                you arrive, you are immersed in a joyful healing experience. Located in the heart of the
+                Western Ghats, the retreat is a reclusive paradise that welcomes travellers who seek to
+                see this side of the mountains in all its glory. Tigris Valley is a break from all stressors,
+                where we help you find the true self that you have lost along the way.
+                <br>
+                Life at Tigris is about restoration, care, and solace - a refuge where you can find
+                yourself. It is an unforgettable retreat experience that is guaranteed to leave you feeling
+                revitalised and renewed.
+            </p>
+            <div class="section-buttons">
+                <a href="cottages.html" class="btn">Book Now</a>
+                <a href="contact-us.html" class="btn btn-secondary">Contact us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <div class="image-container">
+            <img src="assets/images/experience.png" alt="A person getting a hot stone massage">
+            <div class="image-text">
+                The Tigris Experience
+            </div>
+        </div>
+        <div class="text-container">
+            <p class="section-text">
+                Tigris Valley offers world class Ayush treatments under the expert eye of renowned
+                doctors. Every last detail of Tigris is curated to give you an optimal stay that resets your
+                system. The Tigris experience is more than just a holiday spot, and goes beyond
+                wellness. We offer a mix of traditional Asian remedies & Ayurvedic techniques to give
+                you a luxury experience that transcends cultural boundaries. </p>
+        </div>
+    </section>
+
+    <section class="packages">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-packages.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Packages Tailored to Every Need
+            </h3>
+            <a class="btn btn-secondary" href="packages.html">
+                <div class="btn-text">Read More</div>
+                <div class="btn-icon">
+                    <img src="assets/icons/read-more.svg" alt="">
+                </div>
+            </a>
+        </div>
+        <p class="section-text">
+            Each of us lives unique lives, and our problems are our own. At Tigris we offer treatment
+            packages that are tailored to suit different needs. Each package is a mix of the AYUSH
+            medicinal philosophies of Ayurveda, Yoga, Unani, Siddha, and Homeopathy - giving you
+            well-rounded holistic care that renews both mind and body. You can consult with our experts
+            online and choose a package that suits you before you make the trip here!
+        </p>
+        <div class="cards-container scroll">
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-1.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Relaxation Programme (3 days)</h4>
+                <div class="card-text">
+                    Sometimes, all you really need is a small break to fine tune yourself. The 3-day Tigris
+                    Relaxation Programme gives you exactly that - 72 hours where you are immersed in comfort,
+                    leisure and relaxation that will completely relax your mind, body & soul. Complete with massage
+                    therapies that release all the pent up tension in your body, our very own diet and exercise
+                    guidance, and the calming greenery that punctuates every moment spent here, you will feel
+                    good as new in just 3 days!
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-2.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Relaxation Programme (7 days)</h4>
+                <div class="card-text">
+                    If you find yourself getting too caught up in the pressures of life, and feel like you're at a dead
+                    end - then this package is for you.
+                    For an entire week you can relax & let our experts take care of you - putting you at
+                    well-deserved ease. Our specially curated massage therapies, the soothing environment that
+                    surrounds you, and the beautiful lush nature that envelops you, all work in tandem to cure your
+                    burnout. In 7 days, you can re-enter the world stronger, and more in tune with yourself than ever
+                    before!
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-3.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Detox Programme</h4>
+                <div class="card-text">
+                    When toxicity piles up inside your body, the quality of your life goes down. It's easy to feel
+                    yourself lose focus, and fall prey to diseases, discomfort, and even depression when this
+                    happens. This is why our Detox Programme gives you an amazingly transformative cleansing
+                    experience. This one week programme flushes out the impurities that have built up in your body,
+                    and leaves you feeling fresh and rejuvenated. Treatments include traditional massages,
+                    Hijama/cupping therapy, Munsij/Mushil therapy, fomentation and more that rehabilitate your
+                    body and mind. You will leave here feeling entirely new!
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-1.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Rejuvenation Programme</h4>
+                <div class="card-text">
+                    Re-awaken your body, mind and soul with our Rejuvenation Programme! Spend two weeks in
+                    the cradle of Wayanad's lush foothills, and use the time for self-care and reflection. In the heart
+                    of this blooming greenery, you will find every breath more purposeful, and refreshing. We
+                    welcome you with an organized itinerary of massage therapies, exercises, meditation sessions,
+                    and yoga. Add to this the picturesque beauty of the mountains, and the crisp freshness of the
+                    trees are sure to leave you feeling your best!
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-2.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Active Retreat Programme</h4>
+                <div class="card-text">
+                    Our Active Retreat Programme is a perfect 5-day program if a momentum towards fitness and
+                    movement is what you're seeking. This programme helps you get acquainted with the calming
+                    nature of activity. For five days you can fall into a rhythm of workouts, exercise, healthy eating,
+                    and a long-sought-after fulfillment that will continue to energize you even after you leave. You
+                    will find yourself emanating a contagious positivity that will change your life, and help you make
+                    fitness a habit!
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-3.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Total Transformation Programme</h4>
+                <div class="card-text">
+                    The Total Transformation Programme is something you must experience at least once. Take a
+                    break from your repetitive daily routine, and come stay with us for three magical weeks. Starting
+                    from the deepest abyss of your mind, this programme resets your mind, body, and soul. The
+                    sessions led by our excellent mind trainers help you tap into a reserve of energy and life you
+                    didn't know you had! The personalized exercise regimes set for you by us can be practised for
+                    the rest of your life, and will have you rejoicing in the true beauty of living.
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-1.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Holistic Anti-Ageing Programme</h4>
+                <div class="card-text">
+                    If you feel like you're ageing too fast, if weakness and exhaustion are slowing you down, and if
+                    wrinkles are coming on too quick - then this package is for you. If your body feels older than
+                    your soul, then you need to take a step back and make some changes. We'll help you make that
+                    change with just two weeks at Tigris Valley! This programme pampers you with special
+                    anti-ageing facials and full body massages that bring life back into your body, and will have you
+                    feeling young, fresh, and stronger than ever before!
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-2.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Slimsy Programme</h4>
+                <div class="card-text">
+                    Get started on your fitness journey with the Slimsy Programme that combines exercise and diet
+                    with traditional therapies that make shedding those extra pounds easier that ever! The
+                    programme includes invigorating workouts, daily massage sessions focussed on reducing fat
+                    levels, and a deceivingly delicious healthy diet prepared by our wonderful chefs. Stick with us
+                    for 30 days, and we'll help you begin your very own magical weight-loss story that will change
+                    your life!
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-3.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Stress-Free Programme</h4>
+                <div class="card-text">
+                    What better place to de-stress than in the nurturing midst of the lush green Western Ghats? If
+                    the stress has been building up for far too long, and your mind and body are begging for a
+                    break, Tigris Valley is the answer. Nestled in the beautiful forests of Wayanad, you can finally
+                    kick back and relax while our professionals help you get in touch with your inner peace. This
+                    programme lets you meditate, enjoy the soothing vibes of the misty mountains, eat refreshingly
+                    delicious food, and be pampered with calming massage therapies. In seven days, you will feel
+                    lighter, and so much happier than before!
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-1.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Fitness Programme</h4>
+                <div class="card-text">
+                    Been meaning to start living a better, fitter lifestyle but just can't find the motivation or
+                    knowledge
+                    you need to start? The Tigris Fitness Programme is the extra push you've been looking for! We
+                    do a full analysis to determine your physical status, and then develop a custom fitness schedule
+                    that works the best for you. With a fitness regime and diet prepared just for you by our experts,
+                    and therapies that rejuvenate your body, you will be on a fitness journey more powerful and
+                    effective that any other. Incorporate the change you start here into your life, and you will feel
+                    the
+                    difference!
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-2.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Gentle Cleansing Programme</h4>
+                <div class="card-text">
+                    Heal, cleanse, and purify your being with the Tigris Gentle Cleansing Programme. We don't
+                    have to describe the pleasure of a total cleanse, because you'll be able to feel it for yourself
+                    very
+                    soon! Flush out your insides with fresh juice therapy, and cleanse your outside with a herbal
+                    steam bath. The Hijama therapy performed by our in-house experts can cleanse your blood too,
+                    and leave you feeling vitalized. To top it off, we give you a customized diet plan that you can
+                    follow for the rest of your life! This is the push you've been waiting for, and we promise it will
+                    change your life.
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/package-3.png" alt="">
+                </div>
+                <h4 class="card-title">Tigris Beauty Care Programme</h4>
+                <div class="card-text">
+                    If you're struggling with skin problems like acne, pimples, or wrinkles, and you feel like your skin
+                    isn't living up to its true potential, then this is the perfect programme for you. Our skincare
+                    experts employ purely natural therapies that will revive your skin, and have it glowing with
+                    youthful beauty. Focussing on the entire body to uplift your sense of self, the programme
+                    includes full-body massages, herbal facials, Navara therapy, and exercise plans. There are also
+                    meditation sessions and personalized wellness diet plans to ease your soul, and have you
+                    exuding a charming beauty that shines from within!
+                </div>
+                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-gallery.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Gallery
+            </h3>
+            <a class="btn btn-secondary" href="#">
+                <div class="btn-text">See More</div>
+                <div class="btn-icon">
+                    <img src="assets/icons/read-more.svg" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="gallery-container">
+            <div class="image"><img src="assets/images/gallery-1.png" alt=""></div>
+            <div class="image"><img src="assets/images/gallery-2.png" alt=""></div>
+            <div class="image"><img src="assets/images/gallery-3.png" alt=""></div>
+            <div class="image"><img src="assets/images/gallery-1.png" alt=""></div>
+            <div class="image"><img src="assets/images/gallery-2.png" alt=""></div>
+        </div>
+    </section>
+
+    <section class="awards">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-awards.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Awards and Accreditation
+            </h3>
+        </div>
+        <div class="awards-container">
+            <div class="award"><img src="assets/images/award-1.png" alt=""></div>
+            <div class="award"><img src="assets/images/award-2.png" alt=""></div>
+            <div class="award"><img src="assets/images/award-3.png" alt=""></div>
+            <div class="award"><img src="assets/images/award-4.png" alt=""></div>
+        </div>
+    </section>
+
+    <section class="rooms">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-rooms.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Rooms in Tigris Valley
+            </h3>
+            <a class="btn btn-secondary" href="cottages.html">
+                <div class="btn-text">Read More</div>
+                <div class="btn-icon">
+                    <img src="assets/icons/read-more.svg" alt="">
+                </div>
+            </a>
+        </div>
+        <p class="section-text">
+            At Tigris Valley, we value your comfort and needs. As we welcome you, we offer rooms
+            that have discerning luxuries. While each room varies in the need it caters to, they are
+            all defined by taste, comfort and peace. Our rooms serve as your own personal haven
+            of peace within the valley - whether you're on a quest for wellness, or here to quench
+            your wanderlust.
+        </p>
+        <div class="cards-container scroll">
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/room-1.png" alt="">
+                </div>
+                <h4 class="card-title">Executive Rooms</h4>
+                <div class="card-text">
+                    These rooms speak comfort, and every inch exudes an aura perfect for relaxation.
+                </div>
+                <a href="cottages.html" class="btn">Book now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/room-2.png" alt="">
+                </div>
+                <h4 class="card-title">Deluxe Rooms</h4>
+                <div class="card-text">
+                    Spacious & comfortable rooms defined by a soothing ambience and sleek design.
+                </div>
+                <a href="cottages.html" class="btn">Book now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/room-3.png" alt="">
+                </div>
+                <h4 class="card-title">Royal Suite</h4>
+                <div class="card-text">
+                    Wake up to a perfect view, and enjoy a royal stay in a beautiful & serene setting.
+                </div>
+                <a href="cottages.html" class="btn">Book now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/room-4.png" alt="">
+                </div>
+                <h4 class="card-title">Presidential Suite</h4>
+                <div class="card-text">
+                    True luxury and decadence, a splendid, perfectly furnished personal island.
+                </div>
+                <a href="cottages.html" class="btn">Book now</a>
+            </div>
+<!--
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/room-3.png" alt="">
+                </div>
+                <h4 class="card-title">Presidential Suite</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare
+                </div>
+                <a href="cottages.html" class="btn">Book now</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/room-4.png" alt="">
+                </div>
+               True luxury and decadence, a splendid, perfectly furnished personal island.
+True luxury and decadence, a splendid, perfectly furnished personal island.
+True luxury and decadence, a splendid, perfectly furnished personal island.
+ <h4 class="card-title">Royal Suite</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare
+                </div>
+                <a href="cottages.html" class="btn">Book now</a>
+            </div>
+-->
+        </div>
+    </section>
+
+    <section class="facilities">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-facilities.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Facilities of Tigris Valley
+            </h3>
+            <a class="btn-scroll left hide" href="javascript:scrollLeft()">
+                <img src="assets/icons/facility-left.svg" alt="">
+            </a>
+            <a class="btn-scroll right" href="javascript:scrollRight()">
+                <img src="assets/icons/facility-right.svg" alt="">
+            </a>
+        </div>
+        <div class="facilities-container gallery-container">
+            <div class="image">
+                <img src="assets/images/facility-1.png" alt="">
+                <h4 class="image-text">Multi cuisine restaurant</h4>
+            </div>
+            <div class="image">
+                <img src="assets/images/facility-2.png" alt="">
+                <h4 class="image-text">Wellness restaurant</h4>
+            </div>
+            <div class="image">
+                <img src="assets/images/facility-3.png" alt="">
+                <h4 class="image-text">Fitness centre</h4>
+            </div>
+            <div class="image">
+                <img src="assets/images/facility-4.png" alt="">
+                <h4 class="image-text">Rooms</h4>
+            </div>
+            <div class="image">
+                <img src="assets/images/facility-1.png" alt="">
+                <h4 class="image-text">Multi cuisine restaurant</h4>
+            </div>
+            <div class="image">
+                <img src="assets/images/facility-2.png" alt="">
+                <h4 class="image-text">Wellness restaurant</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-testimonials.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Testimonials
+            </h3>
+        </div>
+        <div class="testimonial-container">
+            <input type="radio" name="tab" id="page-1" checked="">
+            <input type="radio" name="tab" id="page-2">
+            <input type="radio" name="tab" id="page-3">
+            <div class="pages-container">
+                <div class="page page-1">
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-1.png" alt=""></div>
+                        <h4 class="name">Jenny Wilson</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive to</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-2.png" alt=""></div>
+                        <h4 class="name">Wade Warren</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness.</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-3.png" alt=""></div>
+                        <h4 class="name">Leslie Alexander</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive</p>
+                    </div>
+                </div>
+                <div class="page page-2">
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-3.png" alt=""></div>
+                        <h4 class="name">Leslie Alexander</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness.</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-1.png" alt=""></div>
+                        <h4 class="name">Jenny Wilson</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive to</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-2.png" alt=""></div>
+                        <h4 class="name">Wade Warren</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive to</p>
+                    </div>
+                </div>
+                <div class="page page-3">
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-2.png" alt=""></div>
+                        <h4 class="name">Wade Warren</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive to</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-1.png" alt=""></div>
+                        <h4 class="name">Jenny Wilson</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive to</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="image"><img src="assets/images/testimonial-3.png" alt=""></div>
+                        <h4 class="name">Leslie Alexander</h4>
+                        <p class="text">Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic
+                            healthcare retreat, a space away from city chaos, filled with natural care and wellness. We
+                            strive to</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <label for="page-1"></label>
+                <label for="page-2"></label>
+                <label for="page-3"></label>
+            </div>
+        </div>
+    </section>
+
+    <section class="blogs">
+        <div class="section-header">
+            <div class="icon">
+                <img src="assets/icons/section-blogs.svg" alt="">
+            </div>
+            <h3 class="heading">
+                Blogs
+            </h3>
+            <a class="btn btn-secondary" href="#">
+                <div class="btn-text">Read More</div>
+                <div class="btn-icon">
+                    <img src="assets/icons/read-more.svg" alt="">
+                </div>
+            </a>
+        </div>
+
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/blog-1.png" alt="Leaves in rain">
+                </div>
+                <h4 class="card-title">Tigris Relaxation - Lorem ipsum dolor sit amet.</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+                    space.
+                </div>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/blog-2.png" alt="Towel, flowers, candle and lotion">
+                </div>
+                <h4 class="card-title">Massage Treatments - Lorem ipsum dolor sit amet.</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+                    space away from city chaos.
+                </div>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/blog-3.png" alt="Woman in a spa">
+                </div>
+                <h4 class="card-title">Therapy Treatments - Lorem ipsum dolor sit amet.</h4>
+                <div class="card-text">
+                    Tigris Valley, located at Markaz Knowledge City, Calicut, Kerala is a holistic healthcare retreat, a
+                    space away.
+                </div>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="doctor">
+        <div class="doctor-container">
+            <h2 class="title">Let Us Help You</h2>
+            <p class="text">
+                If care is what you need, and peace is what you seek, then we can surely help.
+                Whatever brings you to Tigris Valley, our team of wellness specialists will decide the
+                best course of action to get you where you want to go.
+                If you are in search of answers that you cannot find elsewhere, then tell us what ails you
+                - and we'll tell you how we can help rejuvenate your life!
+            </p>
+            <a href="contact-us.html#contact-form" class="btn">Make an appointment</a>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="details-basic">
+                <img src="assets/Logo.svg" alt="" width="280px">
+                <p>
+                    At Tigris we offer treatment programmes that are tailored to meet the needs of each
+                    individual - in terms of nutrition, therapies, and workouts. Each programme is a mix of
+                    the AYUSH medicinal philosophies of Ayurveda, Yoga, Unani, Siddha, and Homeopathy
+                    - giving you well-rounded holistic care that caters to both mind & body.
+                </p>
+            </div>
+            <div class="details-contact">
+                <a href="tel:+919107040040" class="btn-contact">
+                    <div class="btn-image">
+                        <img src="assets/icons/whatsapp.svg" alt="">
+                    </div>
+                    <div class="btn-text">
+                        +91 91070 400 40
+                    </div>
+                </a>
+                <a href="tel:+919072277881" class="btn-contact">
+                    <div class="btn-image">
+                        <img src="assets/icons/whatsapp.svg" alt="">
+                    </div>
+                    <div class="btn-text">
+                        +91 907 2277881
+                    </div>
+                </a>
+                <a href="mailto:reservation@tigrisvalley.com" class="btn-contact">
+                    <div class="btn-image">
+                        <img src="assets/icons/mail.svg" alt="">
+                    </div>
+                    <div class="btn-text">
+                        reservation@tigrisvalley.com
+                    </div>
+                </a>
+                <div class="social-container">
+                    <a href="#" class="btn-social">
+                        <img src="assets/icons/facebook.svg" alt="">
+                    </a>
+                    <a href="#" class="btn-social">
+                        <img src="assets/icons/instagram.svg" alt="">
+                    </a>
+                    <a href="#" class="btn-social">
+                        <img src="assets/icons/twitter.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="about-us.html">About us</a>
+                <a href="experience.html">Experience</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="care-units.html">Care units</a>
+                <a href="packages.html">Programmes</a>
+                <a href="events.html">Events</a>
+                <a href="facilities.html">Facilities</a>
+                </ul>
+            </div>
+            <div class="footer-location">
+                <p>
+                    <strong>TIGRIS VALLEY</strong>
+                    <br>Tigris Valley, Thamarassery
+                    <br>Kannoth P.O, Calicut - 673580
+                </p>
+                <img src="assets/images/location.png" alt="">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © tigrisvalley.com
+        </div>
+    </footer>
+
+    <a href="#" id="enquire-now">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 512 512">
+            <path
+                d="M191.1 224c0-17.72-14.34-32.04-32-32.04L144 192c-35.34 0-64 28.66-64 64.08v47.79C80 339.3 108.7 368 144 368H160c17.66 0 32-14.36 32-32.06L191.1 224zM256 0C112.9 0 4.583 119.1 .0208 256L0 296C0 309.3 10.75 320 23.1 320S48 309.3 48 296V256c0-114.7 93.34-207.8 208-207.8C370.7 48.2 464 141.3 464 256v144c0 22.09-17.91 40-40 40h-110.7C305 425.7 289.7 416 272 416H241.8c-23.21 0-44.5 15.69-48.87 38.49C187 485.2 210.4 512 239.1 512H272c17.72 0 33.03-9.711 41.34-24H424c48.6 0 88-39.4 88-88V256C507.4 119.1 399.1 0 256 0zM368 368c35.34 0 64-28.7 64-64.13V256.1C432 220.7 403.3 192 368 192l-16 0c-17.66 0-32 14.34-32 32.04L320 335.9C320 353.7 334.3 368 352 368H368z" />
+        </svg>
+        <div class="enquire-text">
+            Enquire Now
+        </div>
+    </a>
+
+</body>
+
+</html>
