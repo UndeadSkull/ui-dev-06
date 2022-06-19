@@ -15,7 +15,7 @@ const modal = document.querySelector(".video-container")
 const showVideo = () => modal.showModal()
 const hideVideo = () => {
     modal.close();
-    document.querySelector("iframe").contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    document.querySelector("video").pause();
 }
 
 // Horizontal Scrolling
@@ -36,8 +36,8 @@ sideScroll = (element, delta, speed, distance, flag = true) => {
 
 // Hide Scroll Buttons at ends
 checkHide = (element) => {
-    const btnLeft = document.querySelector(".btn-scroll.left")
-    const btnRight = document.querySelector(".btn-scroll.right")
+    const btnLeft = document.querySelector("." + element.id + ".btn-scroll.left")
+    const btnRight = document.querySelector("." + element.id + ".btn-scroll.right")
     element.scrollLeft == 0
         ? btnLeft.classList.add("hide")
         : btnLeft.classList.remove("hide")

@@ -37,6 +37,12 @@ scrollContainer1[1].addEventListener("wheel", (evt) => {
   sideScroll(scrollContainer1[1], evt.deltaY, 5, 300);
 });
 
-const scrollContainer2 = document.querySelector(".facilities-container");
-scrollRight = () => sideScroll(scrollContainer2, 300, 5, 620)
-scrollLeft = () => sideScroll(scrollContainer2, -300, 5, 620)
+scrollRight = (elem) => {
+  const element = document.querySelector("." + elem + "-container");
+  // console.log(element);
+  sideScroll(element, 300, 5, 620)
+}
+scrollLeft = (elem) => {
+  const element = document.querySelector("." + elem + "-container");
+  sideScroll(element, -300, 5, 620)
+}

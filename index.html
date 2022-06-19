@@ -77,8 +77,13 @@
     </header>
 
     <dialog class="video-container">
-        <iframe src="https://www.youtube-nocookie.com/embed/vZVdnQg2z2Q?modestbranding=1&showinfo=0&rel=0&enablejsapi=1"
-            frameborder="0" allowfullscreen></iframe>
+
+        <video controls width="100%">
+            <source src="assets/Intro.webm" type="video/webm">
+            <source src="assets/Intro.mp4" type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+
         <button onclick="hideVideo()">X</button>
     </dialog>
 
@@ -257,13 +262,13 @@
                     <img src="assets/icons/read-more.svg" alt="">
                 </div>
             </a> -->
-            <!-- 
-            <a class="btn-scroll left hide" href="javascript:scrollLeft()">
+
+            <a class="packages btn-scroll left hide" href="javascript:scrollLeft('packages')">
                 <img src="assets/icons/facility-left.svg" alt="">
             </a>
-            <a class="btn-scroll right" href="javascript:scrollRight()">
+            <a class="packages btn-scroll right" href="javascript:scrollRight('packages')">
                 <img src="assets/icons/facility-right.svg" alt="">
-            </a> -->
+            </a>
         </div>
         <p class="section-text">
             Each of us lives unique lives, and our problems are our own. At Tigris we offer treatment
@@ -272,7 +277,7 @@
             well-rounded holistic care that renews both mind and body. You can consult with our experts
             online and choose a package that suits you before you make the trip here!
         </p>
-        <div class="cards-container scroll">
+        <div class="cards-container packages-container scroll" id="packages">
             <div class="card">
                 <div class="card-image">
                     <img src="assets/images/relaxation.png" alt="">
@@ -473,14 +478,20 @@
             <h3 class="heading">
                 Gallery
             </h3>
-            <a class="btn btn-secondary" href="#">
+            <!-- <a class="btn btn-secondary" href="#">
                 <div class="btn-text">See More</div>
                 <div class="btn-icon">
                     <img src="assets/icons/read-more.svg" alt="">
                 </div>
+            </a> -->
+            <a class="gallery btn-scroll left hide" href="javascript:scrollLeft('gallery')">
+                <img src="assets/icons/facility-left.svg" alt="">
+            </a>
+            <a class="gallery btn-scroll right" href="javascript:scrollRight('gallery')">
+                <img src="assets/icons/facility-right.svg" alt="">
             </a>
         </div>
-        <div class="gallery-container">
+        <div class="gallery-container" id="gallery">
             <div class="image"><img src="assets/images/library7.png" alt=""></div>
             <div class="image"><img src="assets/images/library2.png" alt=""></div>
             <div class="image"><img src="assets/images/library3.png" alt=""></div>
@@ -609,14 +620,14 @@
             <h3 class="heading">
                 Facilities of Tigris Valley
             </h3>
-            <a class="btn-scroll left hide" href="javascript:scrollLeft()">
+            <a class="facilities btn-scroll left hide" href="javascript:scrollLeft('facilities')">
                 <img src="assets/icons/facility-left.svg" alt="">
             </a>
-            <a class="btn-scroll right" href="javascript:scrollRight()">
+            <a class="facilities btn-scroll right" href="javascript:scrollRight('facilities')">
                 <img src="assets/icons/facility-right.svg" alt="">
             </a>
         </div>
-        <div class="facilities-container gallery-container">
+        <div class="facilities-container gallery-container" id="facilities">
             <div class="image">
                 <img src="assets/images/facility-1.png" alt="">
                 <h4 class="image-text">Wellness restaurant</h4>
