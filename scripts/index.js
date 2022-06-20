@@ -46,3 +46,8 @@ scrollLeft = (elem) => {
   const element = document.querySelector("." + elem + "-container");
   sideScroll(element, -300, 5, 620)
 }
+
+lightbox.option({
+  'fitImagesInViewport': true,
+  'wrapAround': true
+})

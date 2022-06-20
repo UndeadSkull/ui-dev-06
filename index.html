@@ -14,6 +14,10 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="lightbox/css/lightbox.css">
+    <script defer src="lightbox/js/lightbox-plus-jquery.js"></script>
+
     <link rel="stylesheet" href="styles/colors.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/index.css">
@@ -84,7 +88,7 @@
             Sorry, your browser doesn't support embedded videos.
         </video>
 
-        <button onclick="hideVideo()">X</button>
+        <button onclick="hideVideo()">&times;</button>
     </dialog>
 
     <section class="hero">
@@ -478,12 +482,6 @@
             <h3 class="heading">
                 Gallery
             </h3>
-            <!-- <a class="btn btn-secondary" href="#">
-                <div class="btn-text">See More</div>
-                <div class="btn-icon">
-                    <img src="assets/icons/read-more.svg" alt="">
-                </div>
-            </a> -->
             <a class="gallery btn-scroll left hide" href="javascript:scrollLeft('gallery')">
                 <img src="assets/icons/facility-left.svg" alt="">
             </a>
@@ -492,18 +490,42 @@
             </a>
         </div>
         <div class="gallery-container" id="gallery">
-            <div class="image"><img src="assets/images/library7.png" alt=""></div>
-            <div class="image"><img src="assets/images/library2.png" alt=""></div>
-            <div class="image"><img src="assets/images/library3.png" alt=""></div>
-            <div class="image"><img src="assets/images/library4.png" alt=""></div>
-            <div class="image"><img src="assets/images/library5.png" alt=""></div>
-            <div class="image"><img src="assets/images/library8.png" alt=""></div>
-            <div class="image"><img src="assets/images/library9.png" alt=""></div>
-            <div class="image"><img src="assets/images/library10.png" alt=""></div>
-            <div class="image"><img src="assets/images/library11.png" alt=""></div>
-            <div class="image"><img src="assets/images/library12.png" alt=""></div>
-            <div class="image"><img src="assets/images/library13.png" alt=""></div>
-            <div class="image"><img src="assets/images/library14.png" alt=""></div>
+            <a class="image" data-lightbox="gallery"  href="assets/images/library7.png">
+                <img src="assets/images/library7.png" alt="">
+            </a>
+            <a class="image" data-lightbox="gallery"  href="assets/images/library2.png">
+                <img src="assets/images/library2.png" alt="">
+            </a>
+            <a class="image" data-lightbox="gallery"  href="assets/images/library3.png">
+                <img src="assets/images/library3.png" alt="">
+            </a>
+            <a class="image" data-lightbox="gallery"  href="assets/images/library4.png">
+                <img src="assets/images/library4.png" alt="">
+            </a>
+            <a class="image" data-lightbox="gallery"  href="assets/images/library5.png">
+                <img src="assets/images/library5.png" alt="">
+            </a>
+            <a class="image" data-lightbox="gallery"  href="assets/images/library8.png">
+                <img src="assets/images/library8.png" alt="">
+            </a>
+            <a class="image" data-lightbox="gallery"  href="assets/images/library9.png">
+                <img src="assets/images/library9.png" alt="">
+            </a>
+            <a class="image" data-lightbox="gallery"  href="assets/images/library10.png">
+                <img src="assets/images/library10.png" alt="">
+            </a>
+            <a class="image" data-lightbox="gallery"  href="assets/images/library11.png">
+                <img src="assets/images/library11.png" alt="">
+            </a>
+            <a class="image" data-lightbox="gallery"  href="assets/images/library12.png">
+                <img src="assets/images/library12.png" alt="">
+            </a>
+            <a class="image" data-lightbox="gallery"  href="assets/images/library13.png">
+                <img src="assets/images/library13.png" alt="">
+            </a>
+            <a class="image" data-lightbox="gallery"  href="assets/images/library14.png">
+                <img src="assets/images/library14.png" alt="">
+            </a>
         </div>
     </section>
 
