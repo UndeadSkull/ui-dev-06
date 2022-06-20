@@ -10643,6 +10643,7 @@ return jQuery;
     albumLabel: 'Image %1 of %2',
     alwaysShowNavOnTouchDevices: false,
     fadeDuration: 600,
+	fullScreenImages: true,
     fitImagesInViewport: true,
     imageFadeDuration: 600,
     // maxWidth: 800,
@@ -10904,13 +10905,29 @@ return jQuery;
 
       $image.width(preloader.width);
       $image.height(preloader.height);
-      windowWidth = $(window).width();
-      windowHeight = $(window).height();
-
-      // Calculate the max image dimensions for the current viewport.
-      // Take into account the border around the image and an additional 10px gutter on each side.
-      maxImageWidth  = windowWidth - self.containerPadding.left - self.containerPadding.right - self.imageBorderWidth.left - self.imageBorderWidth.right - 20;
-      maxImageHeight = windowHeight - self.containerPadding.top - self.containerPadding.bottom - self.imageBorderWidth.top - self.imageBorderWidth.bottom - self.options.positionFromTop - 70;
+	  // Take into account the border around the image and an additional 10px gutter on each side.
+	  windowWidth    = $(window).width();
+	  windowHeight   = $(window).height();
+	  maxImageWidth  = windowWidth - self.containerPadding.left -
+	    self.containerPadding.right - self.imageBorderWidth.left -
+	    self.imageBorderWidth.right - 20;
+	  maxImageHeight = windowHeight - self.containerPadding.top -
+	    self.containerPadding.bottom - self.imageBorderWidth.top -
+	    self.imageBorderWidth.bottom - 120;
+	  
+	  //Full screen image option
+	  if(self.options.fullScreenImages) {
+	    $image.width("auto");
+	    $image.height("auto");
+	    //Scale image to full width
+	    $image.width(maxImageWidth);
+	  
+	    //If image height too big scale it down
+	    if($image.height() > maxImageHeight) {
+	  	$image.height(maxImageHeight);
+	  	$image.width("auto");
+	    }
+	  }
 
       /*
       Since many SVGs have small intrinsic dimensions, but they support scaling

@@ -47,6 +47,7 @@ scrollLeft = (elem) => {
   sideScroll(element, -300, 5, 620)
 }
 
+// Lightbox Options
 lightbox.option({
   'fitImagesInViewport': true,
   'wrapAround': true
