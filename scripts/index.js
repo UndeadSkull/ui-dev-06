@@ -50,5 +50,6 @@ scrollLeft = (elem) => {
 // Lightbox Options
 lightbox.option({
   'fitImagesInViewport': true,
-  'wrapAround': true
+  'wrapAround': true,
+  'disableScrolling': true
 })

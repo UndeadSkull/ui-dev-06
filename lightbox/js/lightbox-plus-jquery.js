@@ -10908,13 +10908,13 @@ return jQuery;
 	  // Take into account the border around the image and an additional 10px gutter on each side.
 	  windowWidth    = $(window).width();
 	  windowHeight   = $(window).height();
-	  maxImageWidth  = windowWidth - self.containerPadding.left -
-	    self.containerPadding.right - self.imageBorderWidth.left -
-	    self.imageBorderWidth.right - 20;
-	  maxImageHeight = windowHeight - self.containerPadding.top -
-	    self.containerPadding.bottom - self.imageBorderWidth.top -
-	    self.imageBorderWidth.bottom - 120;
-	  
+	  if (($(window).width() > 300) && ($(window).width() < 993)) {
+		maxImageWidth  = windowWidth - self.containerPadding.left - self.containerPadding.right - self.imageBorderWidth.left - self.imageBorderWidth.right - 50; 
+		maxImageHeight = windowHeight - self.containerPadding.top - self.containerPadding.bottom - self.imageBorderWidth.top - self.imageBorderWidth.bottom - 120;
+	  } else {
+		maxImageWidth  = windowWidth - self.containerPadding.left - self.containerPadding.right - self.imageBorderWidth.left - self.imageBorderWidth.right - 20;
+		maxImageHeight = windowHeight - self.containerPadding.top - self.containerPadding.bottom - self.imageBorderWidth.top - self.imageBorderWidth.bottom - 120;
+	  }
 	  //Full screen image option
 	  if(self.options.fullScreenImages) {
 	    $image.width("auto");
