@@ -22,20 +22,20 @@ inputChange = (elem) => {
 }
 
 // Gallery And Facilities Scroll
-const scrollContainer1 = document.querySelectorAll(".gallery-container");
-scrollContainer1[0].addEventListener("wheel", (evt) => {
-  if (Math.abs(evt.deltaX) < Math.abs(evt.deltaY)) {
-    evt.preventDefault()
-  }
-  sideScroll(scrollContainer1[0], evt.deltaY, 5, 300, false);
 
-});
-scrollContainer1[1].addEventListener("wheel", (evt) => {
-  if (Math.abs(evt.deltaX) < Math.abs(evt.deltaY)) {
-    evt.preventDefault()
-  }
-  sideScroll(scrollContainer1[1], evt.deltaY, 5, 300);
-});
+// const scrollContainer1 = document.querySelectorAll(".gallery-container");
+// scrollContainer1[0].addEventListener("wheel", (evt) => {
+//   if (Math.abs(evt.deltaX) < Math.abs(evt.deltaY)) {
+//     evt.preventDefault()
+//   }
+//   sideScroll(scrollContainer1[0], evt.deltaY, 5, 300, false);
+// });
+// scrollContainer1[1].addEventListener("wheel", (evt) => {
+//   if (Math.abs(evt.deltaX) < Math.abs(evt.deltaY)) {
+//     evt.preventDefault()
+//   }
+//   sideScroll(scrollContainer1[1], evt.deltaY, 5, 300);
+// });
 
 scrollRight = (elem) => {
   const element = document.querySelector("." + elem + "-container");

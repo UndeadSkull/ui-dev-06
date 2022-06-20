@@ -17,18 +17,17 @@
     box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.7);
 }
 
-
-/*
-header:not([stuck]) img {
+header:not([stuck]) :is(.btn, .btn-open) img {
     filter: brightness(0) invert(1);
-}*/
+}
 
-header:not([stuck]) a {
+header:not([stuck])>a,
+header:not([stuck])>:not(.mobile) a:not(.droplink) {
     color: #ffffffea;
     border-color: #ffffffea;
 }
 
-header:not([stuck]) a:hover {
+header:not([stuck]) :not(.mobile) a:not(.droplink):hover {
     color: #fff;
     border-color: #fff;
 }
@@ -425,6 +424,7 @@ section.facilities>.facilities-container img {
 .footer-location img {
     margin-top: 50px;
     max-width: 100%;
+    border-radius: 5px;
 }
 
 .details-contact>.btn-contact {
@@ -491,9 +491,9 @@ section.facilities>.facilities-container img {
         padding: 0;
     }
 
-    section.hero .heroSlides .content {
+    /* section.hero .heroSlides .content {
         top: 34vh;
-    }
+    } */
 
     section.about {
         flex-direction: column;
@@ -540,6 +540,16 @@ section.facilities>.facilities-container img {
 }
 
 @media only screen and (max-width:550px) {
+
+    section.hero h2 {
+        font-size: max(30px, 10vw);
+        line-height: max(30px, 10vw);
+    }
+
+    section.hero p {
+        font-size: max(12px, 4vw);
+        line-height: max(16px, 6vw);
+    }
 
     .footer-top {
         grid-template-columns: 1fr;

@@ -76,16 +76,6 @@
         margin: 10px;
     }
 
-    section.hero h2 {
-        font-size: max(30px, 4vw);
-        line-height: max(30px, 5vw);
-    }
-
-    section.hero p {
-        font-size: max(12px, 1.4vw);
-        line-height: max(16px, 1.8vw);
-    }
-
     section.doctor {
         flex-wrap: wrap;
         overflow: hidden;
