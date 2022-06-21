@@ -37,7 +37,7 @@
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="packages.html">Programmes</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="contact-us.php">Contact Us</a></li>
             </ul>
         </nav>
         <nav class="mobile">
@@ -53,7 +53,7 @@
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="packages.html">Programmes</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="contact-us.php">Contact Us</a></li>
             </ul>
         </nav>
         <a class="btn btn-secondary" href="javascript:showVideo();">
@@ -209,7 +209,7 @@
             </p>
             <div class="section-buttons">
                 <a href="cottages.html" class="btn">Book Now</a>
-                <a href="contact-us.html" class="btn btn-secondary">Contact us</a>
+                <a href="contact-us.php" class="btn btn-secondary">Contact us</a>
             </div>
         </div>
     </section>
@@ -267,7 +267,7 @@
                     guidance, and the calming greenery that punctuates every moment spent here, you will feel
                     good as new in just 3 days!
                 </div>
-                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+                <a href="contact-us.php#contact-form" class="btn">Enquire now</a>
             </div>
             <div class="card">
                 <div class="card-image">
@@ -283,7 +283,7 @@
                     burnout. In 7 days, you can re-enter the world stronger, and more in tune with yourself than ever
                     before!
                 </div>
-                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+                <a href="contact-us.php#contact-form" class="btn">Enquire now</a>
             </div>
             <div class="card">
                 <div class="card-image">
@@ -299,7 +299,7 @@
                     Hijama/cupping therapy, Munsij/Mushil therapy, fomentation and more that rehabilitate your
                     body and mind. You will leave here feeling entirely new!
                 </div>
-                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+                <a href="contact-us.php#contact-form" class="btn">Enquire now</a>
             </div>
             <div class="card">
                 <div class="card-image">
@@ -314,7 +314,7 @@
                     and yoga. Add to this the picturesque beauty of the mountains, and the crisp freshness of the
                     trees are sure to leave you feeling your best!
                 </div>
-                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+                <a href="contact-us.php#contact-form" class="btn">Enquire now</a>
             </div>
             <div class="card">
                 <div class="card-image">
@@ -329,7 +329,7 @@
                     will find yourself emanating a contagious positivity that will change your life, and help you make
                     fitness a habit!
                 </div>
-                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+                <a href="contact-us.php#contact-form" class="btn">Enquire now</a>
             </div>
             <div class="card">
                 <div class="card-image">
@@ -344,7 +344,7 @@
                     didn't know you had! The personalized exercise regimes set for you by us can be practised for
                     the rest of your life, and will have you rejoicing in the true beauty of living.
                 </div>
-                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+                <a href="contact-us.php#contact-form" class="btn">Enquire now</a>
             </div>
             <div class="card">
                 <div class="card-image">
@@ -359,7 +359,7 @@
                     anti-ageing facials and full body massages that bring life back into your body, and will have you
                     feeling young, fresh, and stronger than ever before!
                 </div>
-                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+                <a href="contact-us.php#contact-form" class="btn">Enquire now</a>
             </div>
             <div class="card">
                 <div class="card-image">
@@ -374,7 +374,7 @@
                     for 30 days, and we'll help you begin your very own magical weight-loss story that will change
                     your life!
                 </div>
-                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+                <a href="contact-us.php#contact-form" class="btn">Enquire now</a>
             </div>
             <div class="card">
                 <div class="card-image">
@@ -390,7 +390,7 @@
                     delicious food, and be pampered with calming massage therapies. In seven days, you will feel
                     lighter, and so much happier than before!
                 </div>
-                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+                <a href="contact-us.php#contact-form" class="btn">Enquire now</a>
             </div>
             <div class="card">
                 <div class="card-image">
@@ -408,7 +408,7 @@
                     the
                     difference!
                 </div>
-                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+                <a href="contact-us.php#contact-form" class="btn">Enquire now</a>
             </div>
             <div class="card">
                 <div class="card-image">
@@ -425,7 +425,7 @@
                     follow for the rest of your life! This is the push you've been waiting for, and we promise it will
                     change your life.
                 </div>
-                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+                <a href="contact-us.php#contact-form" class="btn">Enquire now</a>
             </div>
             <div class="card">
                 <div class="card-image">
@@ -441,7 +441,7 @@
                     meditation sessions and personalized wellness diet plans to ease your soul, and have you
                     exuding a charming beauty that shines from within!
                 </div>
-                <a href="contact-us.html#contact-form" class="btn">Enquire now</a>
+                <a href="contact-us.php#contact-form" class="btn">Enquire now</a>
             </div>
         </div>
     </section>
@@ -791,7 +791,7 @@
                 If you are in search of answers that you cannot find elsewhere, then tell us what ails you
                 - and we'll tell you how we can help rejuvenate your life!
             </p>
-            <a href="contact-us.html#contact-form" class="btn">Make an appointment</a>
+            <a href="contact-us.php#contact-form" class="btn">Make an appointment</a>
         </div>
 
     </section>
@@ -848,7 +848,7 @@
                 <a href="about-us.html">About us</a>
                 <a href="experience.html">Experience</a>
                 <a href="treatments.html">Treatments</a>
-                <a href="contact-us.html">Contact Us</a>
+                <a href="contact-us.php">Contact Us</a>
                 <a href="care-units.html">Care units</a>
                 <a href="packages.html">Programmes</a>
                 <a href="events.html">Events</a>

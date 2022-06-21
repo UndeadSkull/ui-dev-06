@@ -1,23 +1,68 @@
-.whatsapp-ico{
+.whatsapp-ico {
     fill: white;
     width: 50px;
     height: 50px;
     padding: 3px;
     background-color: #4dc247;
     border-radius: 50%;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     /* box-shadow: 2px 2px 11px rgba(0,0,0,0.7); */
     position: fixed;
     bottom: 20px;
-    right : 20px;
+    right: 20px;
     z-index: 10;
 }
 
-.whatsapp-ico:hover{
-    box-shadow: 2px 2px 11px rgba(0,0,0,0.7);
+.whatsapp-ico:hover {
+    box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.7);
 }
 
+#msg-dialog {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
 
+#msg-dialog .box,
+#msg-dialog .box p {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    text-align: center;
+}
+
+#msg-dialog .box {
+    width: min(500px, 80%);
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+#msg-dialog .box p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#msg-dialog .box button {
+    position: fixed;
+    top: -5px;
+    right: -5px;
+    background-color: #4dc247;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
 
 .card-contact-container {
     display: grid;
@@ -100,6 +145,9 @@
 .contact-form-container .btn {
     align-self: flex-end;
     border-radius: 5px;
+    font-size: 14px;
+    font-family: inherit;
     font-weight: 400;
     padding: 13px 45px;
+    cursor: pointer;
 }

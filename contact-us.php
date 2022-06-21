@@ -1,4 +1,57 @@
-<!DOCTYPE html>
+<?php
+
+$errors = [];
+$errorMessage = '';
+
+if (!empty($_POST)) {
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email = $_POST['email'];
+    $tel = $_POST['tel'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    if (empty($firstname) or empty($lastname)) {
+        $errors[] = 'Name is empty';
+    }
+    if (empty($email)) {
+        $errors[] = 'Email is empty';
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Email is invalid';
+    }
+    if (empty($tel)) {
+        $errors[] = 'Mobile Number is empty';
+    }
+    if (empty($subject)) {
+        $errors[] = 'Subject is empty';
+    }
+    if (empty($message)) {
+        $errors[] = 'Message is empty';
+    }
+
+
+    if (empty($errors)) {
+        $toEmail = 'reservation@tigrisvalley.com';
+        $emailSubject = 'New email from your contact form';
+        $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
+
+        $bodyParagraphs = ["Name: {$firstname} {$lastname}", "Email: {$email}", "Mobile Number: {$tel}", "Subject: {$subject}", "Message:", $message];
+        $body = join(PHP_EOL, $bodyParagraphs);
+
+        if (mail($toEmail, $emailSubject, $body, $headers)) {
+            header("Location: contact-us.php?msg=success");
+            $_POST = array();
+        } else {
+            header("Location: contact-us.php?msg=error");
+        }
+    } else {
+        $allErrors = join('<br/>', $errors);
+        $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
+    }
+}
+
+?>
+
 <html lang="en">
 
 <head>
@@ -32,7 +85,7 @@
             <ul class="header-items">
                 <li><a href="about-us.html">About us</a></li>
 
-<li class="dropdown">
+                <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Wellness</a>
                     <div class="dropdown-content">
                         <a class="droplink" href="care-units.html">Care units</a>
@@ -40,13 +93,13 @@
                         <a class="droplink" href="packages.html">Programmes</a>
                     </div>
                 </li>
-            <!--    <li><a href="care-units.html">Care units</a></li>
+                <!--    <li><a href="care-units.html">Care units</a></li>
                 <li><a href="treatments.html">Treatments</a></li>  -->
                 <li><a href="facilities.html">Facilities</a></li>
                 <li><a href="experience.html">Experience</a></li>
-<!--                <li><a href="packages.html">Programmes</a></li>
+                <!--                <li><a href="packages.html">Programmes</a></li>
                 <li><a href="events.html">Events</a></li>-->
-                <li><a class="active" href="contact-us.html">Contact Us</a></li>
+                <li><a class="active" href="contact-us.php">Contact Us</a></li>
             </ul>
         </nav>
         <nav class="mobile">
@@ -61,8 +114,8 @@
                 <li><a href="facilities.html">Facilities</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="packages.html">Programmes</a></li>
-            <!--    <li><a href="events.html">Events</a></li>  -->
-                <li><a class="active" href="contact-us.html">Contact Us</a></li>
+                <!--    <li><a href="events.html">Events</a></li>  -->
+                <li><a class="active" href="contact-us.php">Contact Us</a></li>
             </ul>
         </nav>
         <a class="btn btn-secondary" href="whatsapp://send?phone=+919107040040">
@@ -72,6 +125,17 @@
             </div>
         </a>
     </header>
+
+    <dialog <?php echo isset($_REQUEST['msg']) ? 'open' : 'close'; ?> id="msg-dialog" >
+        <div class="box">
+            <p><?php if($_REQUEST['msg']=="success"){
+                echo "Message sent successfully!";
+            } elseif($_REQUEST['msg']=="error"){
+                echo "Oops, something went wrong. Please try again later";
+            }?></p>
+            <button onclick="document.getElementById('msg-dialog').close()">&times;</button>
+        </div>
+    </dialog>
 
     <section class="page-hero">
         <h2 class="title">Want to be Healed by Tigris?</h2>
@@ -89,7 +153,8 @@
     </section>
 
     <section class="card-contact-container">
-        <a class="card-contact" href="https://www.google.com/maps/place/TIGRIS+VALLEY+-+Holistic+Wellness+Resort/@11.4706641,76.0089039,15z/data=!4m2!3m1!1s0x0:0x5fdd1c9309a447c0?sa=X&ved=2ahUKEwjgjIrgpID4AhVFat4KHXrDCQcQ_BJ6BAg6EAU">
+        <a class="card-contact"
+            href="https://www.google.com/maps/place/TIGRIS+VALLEY+-+Holistic+Wellness+Resort/@11.4706641,76.0089039,15z/data=!4m2!3m1!1s0x0:0x5fdd1c9309a447c0?sa=X&ved=2ahUKEwjgjIrgpID4AhVFat4KHXrDCQcQ_BJ6BAg6EAU">
             <div class="contact-icon">
                 <svg width="26" height="32" viewBox="0 0 26 32" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -110,8 +175,8 @@
             </div>
             <div class="contact-text">
                 +91 91070 40040 </br>
-                +91 0495 236 36 00 
-           </div>
+                +91 0495 236 36 00
+            </div>
         </a>
         <a class="card-contact" href="mailto:reservation@tigrisvalley.com">
             <div class="contact-icon">
@@ -141,28 +206,29 @@
                     </a>
                 </div>
             </div>
-            <form class="contact-form-container">
+            <form method="post" action="contact-us.php" class="contact-form-container" id="contact-form">
                 <h3 class="title">We like to hear from you...</h3>
                 <div class="input-row">
-                    <input type="text" placeholder="First Name" name="first-name" id="first-name">
-                    <input type="text" placeholder="Last Name" name="last-name" id="last-name">
+                    <input type="text" placeholder="First Name" name="firstname" id="firstname" value="<?php echo isset($_POST["firstname"]) ? htmlentities($_POST["firstname"]) : ''; ?>" >
+                    <input type="text" placeholder="Last Name" name="lastname" id="lastname" value="<?php echo isset($_POST["lastname"]) ? htmlentities($_POST["lastname"]) : ''; ?>" >
                 </div>
                 <div class="input-row">
-                    <input type="email" placeholder="Email" name="email" id="email">
-                    <input type="tel" placeholder="Mobile Number" name="tel" id="tel">
+                    <input type="email" placeholder="Email" name="email" id="email" value="<?php echo isset($_POST["email"]) ? htmlentities($_POST["email"]) : ''; ?>" >
+                    <input type="tel" placeholder="Mobile Number" name="tel" id="tel" value="<?php echo isset($_POST["tel"]) ? htmlentities($_POST["tel"]) : ''; ?>" >
                 </div>
                 <div class="input-row">
-                    <input type="text" placeholder="Subject" name="subject" id="subject">
+                    <input type="text" placeholder="Subject" name="subject" id="subject" value="<?php echo isset($_POST["subject"]) ? htmlentities($_POST["subject"]) : ''; ?>" >
                 </div>
                 <div class="input-row">
-                    <textarea placeholder="Your Message" name="message" id="message" rows="8"></textarea>
+                    <textarea placeholder="Your Message" name="message" id="message" rows="8"><?php echo isset($_POST["message"]) ? htmlentities($_POST["message"]) : ''; ?></textarea>
                 </div>
-                <a href="#" class="btn">Send Message</a>
+                <p><?php echo((!empty($errorMessage)) ? $errorMessage : '') ?></p>
+                <input class="btn" type="submit" value="Send Message">
             </form>
         </div>
     </section>
 
-<!--
+    <!--
     <section class="doctor">
         <div class="doctor-container">
             <h2 class="title">Let Us Help You</h2>
@@ -173,7 +239,7 @@
                 If you are in search of answers that you cannot find elsewhere, then tell us what ails you
                 - and we'll tell you how we can help rejuvenate your life!
             </p>
-            <a href="contact-us.html#contact-form" class="btn">Make an appointment</a>
+            <a href="contact-us.php#contact-form" class="btn">Make an appointment</a>
         </div>
 
     </section>
@@ -247,7 +313,7 @@
                 <a href="about-us.html">About us</a>
                 <a href="experience.html">Experience</a>
                 <a href="treatments.html">Treatments</a>
-                <a href="contact-us.html">Contact Us</a>
+                <a href="contact-us.php">Contact Us</a>
                 <a href="care-units.html">Care units</a>
                 <a href="packages.html">Programmes</a>
                 <a href="events.html">Events</a>
@@ -266,10 +332,14 @@
             © tigrisvalley.com
         </div>
     </footer>
-<a href="whatsapp://send?phone=+919107040040"><svg viewBox="0 0 32 32" class="whatsapp-ico"><path d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z" fill-rule="evenodd"></path></svg></a>
+    <a href="whatsapp://send?phone=+919107040040"><svg viewBox="0 0 32 32" class="whatsapp-ico">
+            <path
+                d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
+                fill-rule="evenodd"></path>
+        </svg></a>
 
 
-<!--    <a href="#" id="enquire-now">
+    <!--    <a href="#" id="enquire-now">
         <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 512 512">
             <path
                 d="M191.1 224c0-17.72-14.34-32.04-32-32.04L144 192c-35.34 0-64 28.66-64 64.08v47.79C80 339.3 108.7 368 144 368H160c17.66 0 32-14.36 32-32.06L191.1 224zM256 0C112.9 0 4.583 119.1 .0208 256L0 296C0 309.3 10.75 320 23.1 320S48 309.3 48 296V256c0-114.7 93.34-207.8 208-207.8C370.7 48.2 464 141.3 464 256v144c0 22.09-17.91 40-40 40h-110.7C305 425.7 289.7 416 272 416H241.8c-23.21 0-44.5 15.69-48.87 38.49C187 485.2 210.4 512 239.1 512H272c17.72 0 33.03-9.711 41.34-24H424c48.6 0 88-39.4 88-88V256C507.4 119.1 399.1 0 256 0zM368 368c35.34 0 64-28.7 64-64.13V256.1C432 220.7 403.3 192 368 192l-16 0c-17.66 0-32 14.34-32 32.04L320 335.9C320 353.7 334.3 368 352 368H368z" />
